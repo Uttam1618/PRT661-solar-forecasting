@@ -1,0 +1,50 @@
+# ---- Data (large files, do not commit) ----
+data/*
+!data/.gitkeep
+!data/README.md
+*.csv
+*.parquet
+*.duckdb
+*.db
+*.h5
+*.hdf5
+
+# ---- Models and large artefacts ----
+models/
+*.pkl
+*.joblib
+*.keras
+*.pt
+*.onnx
+
+# ---- Credentials — NEVER commit ----
+.env
+.env.*
+*.pem
+*.key
+credentials*
+aws_credentials
+.aws/
+secrets.*
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# ---- Course materials (copyright — do not redistribute) ----
+Weekly Lecture Slides/
+*Lect*.pdf
