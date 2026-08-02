@@ -57,4 +57,4 @@ Governance and Monitoring
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 1.0 | 1 Aug 2026 | Initial set created for A1 — system architecture, workflow plan, storage design, component interaction, data pipeline | *TBC* |
+| 1.0 | 1 Aug 2026 | Initial set created for A1 — system architecture, workflow plan, storage design, component interaction, data pipeline | Uttam Shrestha |

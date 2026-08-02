@@ -1,7 +1,7 @@
 # Planning Record — 1 August 2026
 
 **Type:** Project setup
-**Present:** *TBC*
+**Group:** Group 4 — Uttam Shrestha, Abhishek Tamang, Sarin Uprety, Yogesh Basnet
 **Sprint:** Sprint 1 (A1 — Proposal and Design)
 
 ---
@@ -39,25 +39,27 @@
 
 ## Open questions for the lecturer
 
-1. Week 2 slide 12 states the group project must use open-source tools only, while slide 42
+1. **Group size** — the brief specifies groups of five and we are four. Is a group of four
+   approved, or will a fifth member be assigned?
+2. Week 2 slide 12 states the group project must use open-source tools only, while slide 42
    refers to reflecting the existing AWS architecture. Which applies to A1?
-2. Formatting requires a minimum 11-point font but also states all font sizes ≥ 10. Is 10 pt
+3. Formatting requires a minimum 11-point font but also states all font sizes ≥ 10. Is 10 pt
    acceptable for figure and table captions?
-3. Is workflow automation required for A1? It appears in the Week 1 slides but not in the A1
+4. Is workflow automation required for A1? It appears in the Week 1 slides but not in the A1
    instructions.
 
 ## Actions
 
 | # | Action | Owner | Due |
 |---|---|---|---|
-| 1 | Confirm the five roles and collect GitHub usernames | *TBC* | 3 Aug |
-| 2 | Add all members to the repository and the Jira board | *TBC* | 3 Aug |
-| 3 | Assign every Jira task to a named member | *TBC* | 3 Aug |
-| 4 | Confirm AWS Academy access for all five members | *TBC* | 4 Aug |
-| 5 | Email the lecturer the three open questions | *TBC* | 3 Aug |
-| 6 | Export diagrams to PNG and commit alongside the sources | *TBC* | 4 Aug |
+| 1 | Confirm proposed roles and collect GitHub usernames | Uttam | 3 Aug |
+| 2 | Add all members to the repository and the Jira board | Uttam | 3 Aug |
+| 3 | Assign every Jira task to a named member | Uttam | 3 Aug |
+| 4 | Confirm AWS Academy access for all members | All | 4 Aug |
+| 5 | Email the lecturer the four open questions above | Uttam | 3 Aug |
+| 6 | Export diagrams to PNG and commit alongside the sources | Yogesh | 4 Aug |
 | 7 | Draft assigned report sections | All | 6 Aug |
-| 8 | Assemble, format and submit the report | *TBC* | 8 Aug |
+| 8 | Assemble, format and submit the report | Uttam | 8 Aug |
 
 ## Next meeting
 

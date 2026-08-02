@@ -37,15 +37,16 @@ That paper uses the same site and task. We extend it in three ways:
 | Master Meter 1 | 0.8015 | 96.13 |
 | Master Meter 2 | 0.8641 | 22.41 |
 
-## Team
+## Team — Group 4
 
 | Role | Member | GitHub |
 |---|---|---|
-| Project Lead / PM | *TBC* | |
-| Data Engineer | *TBC* | |
-| Modelling Lead | *TBC* | |
-| Architecture & Design | *TBC* | |
-| Documentation & Governance | *TBC* | |
+| Project Lead / PM | Uttam Shrestha | [@Uttam1618](https://github.com/Uttam1618) |
+| Data Engineer | Abhishek Tamang | *TBC* |
+| Data and Feature Engineer | Sarin Uprety | *TBC* |
+| Modelling and Visualisation Lead | Yogesh Basnet | *TBC* |
+
+Full allocation, epic ownership and report sections: [`docs/task-allocation.md`](docs/task-allocation.md)
 
 ## Project management
 

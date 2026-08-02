@@ -22,11 +22,10 @@ repository and the Jira board.
 
 | Role | Member | Owns |
 |---|---|---|
-| Project Lead / PM | *TBC* | Jira board, sprint plan, governance, timeline |
-| Data Engineer | *TBC* | Acquisition, cleaning pipeline, storage design |
-| Modelling Lead | *TBC* | Model plan, baselines, evaluation protocol |
-| Architecture & Design | *TBC* | All Draw.io artefacts |
-| Documentation & Governance | *TBC* | Report assembly, risk register, ethics, references |
+| Project Lead / PM | Uttam Shrestha | Jira board, sprint plan, governance, timeline, report assembly |
+| Data Engineer | Abhishek Tamang | Acquisition, storage design, ingestion pipeline |
+| Data and Feature Engineer | Sarin Uprety | Cleaning, schema reconciliation, feature engineering |
+| Modelling and Visualisation Lead | Yogesh Basnet | Models, evaluation protocol, dashboard, diagrams |
 
 ## Governance
 
