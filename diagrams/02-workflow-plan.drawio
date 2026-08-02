@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" agent="PRT661" version="24.0.0">
+  <diagram name="Workflow Plan" id="workflow">
+    <mxGraphModel dx="1400" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Workflow Plan — Epics, Owners and Milestones" style="text;html=1;fontSize=20;fontStyle=1;align=center;fontColor=#1F2A5A;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1240" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="Every epic name below appears identically as a Jira epic in the project board" style="text;html=1;fontSize=12;align=center;fontColor=#5A6480;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="1240" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hL" value="EPIC / OWNER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#1F2A5A;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="280" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" value="A1 — Proposal&#10;Week 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="90" width="240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="A2 — Development&#10;Week 6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="560" y="90" width="240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="h3" value="A3 — Demonstration&#10;Week 9" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="90" width="240" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="h4" value="A4 — Final Report&#10;Week 12" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="90" width="240" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r1" value="Data Acquisition&#10;Data Engineer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="145" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A78C4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="158" width="220" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r2" value="Data Storage&#10;Data Engineer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="195" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A78C4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="208" width="460" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r3" value="Data Processing&#10;Data Engineer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="245" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A78C4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="258" width="220" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r4" value="Feature Engineering&#10;Modelling Lead" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="295" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E8B57;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="308" width="460" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r5" value="Analytics and Machine Learning&#10;Modelling Lead" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="345" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E8B57;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="570" y="358" width="700" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r6" value="Visualisation&#10;Architecture and Design" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="395" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8A33D;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="408" width="460" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r7" value="Workflow Automation&#10;Project Lead" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="445" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8A33D;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="810" y="458" width="460" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="r8" value="Governance and Monitoring&#10;Documentation and Governance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="495" width="280" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="b8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3132E;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="330" y="508" width="940" height="24" as="geometry" />
+        </mxCell>
+
+        <mxCell id="m1" value="" style="line;strokeWidth=1;html=1;strokeColor=#C3C7D4;dashed=1;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="555" y="135" width="10" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="m2" value="" style="line;strokeWidth=1;html=1;strokeColor=#C3C7D4;dashed=1;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="795" y="135" width="10" height="420" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="" style="line;strokeWidth=1;html=1;strokeColor=#C3C7D4;dashed=1;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="1035" y="135" width="10" height="420" as="geometry" />
+        </mxCell>
+
+        <mxCell id="key" value="Definition of done: reviewed by one other member · merged to main · Jira task closed with evidence link" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="570" width="1240" height="35" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

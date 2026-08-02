@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net" agent="PRT661" version="24.0.0">
+  <diagram name="System Architecture" id="sysarch">
+    <mxGraphModel dx="1400" dy="800" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="PRT661 Solar Generation Forecasting — High-Level System Architecture" style="text;html=1;fontSize=20;fontStyle=1;align=center;fontColor=#1F2A5A;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1330" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="DKASC Alice Springs · 2008–2026 · 5-minute resolution · Theme 2 Predictive Analytics and Forecasting" style="text;html=1;fontSize=12;align=center;fontColor=#5A6480;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="1330" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="wfband" value="7. Workflow Automation&#10;Scheduled batch orchestration · retraining trigger · pipeline logging" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF7EF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=12;fontStyle=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="210" y="100" width="990" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="src" value="DKASC Portal&#10;&#10;Yearly extracts&#10;2008–2026" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#FFFFFF;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="195" width="140" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="s1" value="1. Data Acquisition&#10;&#10;Download · verify&#10;column groups" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="195" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="2. Data Storage&#10;&#10;Raw · Cleaned ·&#10;Feature zones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="195" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="3. Data Processing&#10;&#10;Deduplicate · reconcile&#10;schema · difference counter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="195" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="4. Feature Engineering&#10;&#10;Lags · rolling stats ·&#10;degradation · calendar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="750" y="195" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="5. Analytics and&#10;Machine Learning&#10;&#10;Walk-forward validation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="930" y="195" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="6. Visualisation&#10;&#10;Forecast vs actual ·&#10;error by time of day" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1110" y="195" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="dec" value="DECISION&#10;&#10;Battery charge /&#10;discharge schedule" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FDF0F0;strokeColor=#B3132E;fontColor=#B3132E;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1290" y="195" width="150" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="govband" value="8. Governance and Monitoring&#10;Data licensing and attribution · reproducibility · model risk · credential handling · drift monitoring" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDF0F0;strokeColor=#B3132E;fontColor=#B3132E;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="325" width="1230" height="55" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ev" value="Evidence · GitHub repository: README, code, notebooks, diagrams, reports, requirements   |   Jira: epics, sprints, task allocation, timeline" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="410" width="1400" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="src" target="s1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="s1" target="s2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="s2" target="s3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="s3" target="s4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="s4" target="s5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="s5" target="s6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#B3132E;strokeWidth=2;endArrow=block;" edge="1" parent="1" source="s6" target="dec"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="fb" value="retrain on drift" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;strokeColor=#8A90A5;endArrow=block;fontSize=10;fontColor=#5A6480;exitX=0.5;exitY=1;entryX=0.5;entryY=1;" edge="1" parent="1" source="s5" target="s3"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1005" y="305" /><mxPoint x="645" y="305" /></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

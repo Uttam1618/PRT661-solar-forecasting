@@ -33,8 +33,19 @@ Every one of these appears in the yearly files, prefixed `96_DKA_MasterMeter1_*`
 breakdown** — roughly 50 inverter/array channels (M1–M20, split by electrical phase), plus both
 master meters and the weather station.
 
-**Decision:** the 17-column file is our primary modelling dataset. Per-inverter channels are out
-of scope — that is anomaly detection (Theme 3), not forecasting.
+**Decision:** the **yearly files are our primary source**. They are the only ones containing both
+master meters and the post-2024 BESS columns, which the battery dispatch framing requires. The
+17-column file is retained as a cross-check for MasterMeter1 only.
+
+Per-inverter channels are out of scope — that is anomaly detection (Theme 3), not forecasting.
+We select four column groups from the yearly files:
+
+| Group | Prefix | Columns |
+|---|---|---|
+| Master meter 1 | `96_DKA_MasterMeter1_` | 7 |
+| Master meter 2 | `62_DKA_MasterMeter2_` | 7 |
+| Weather station | `101_DKA_WeatherStation_` | 9 |
+| BESS and site totals *(2024+)* | `239_` `240_` `241_` `242_` | 13 |
 
 ## 3. Coverage
 
@@ -98,11 +109,12 @@ speed**, which independently corroborates the 52% missingness measured here.
 
 A full year at 5-minute resolution is 105,120 rows. Shortfalls indicate sensor outages.
 
-## 7. Gap in our extract
+## 7. Benchmark target
 
-The master meter file covers **MasterMeter1 only**. The prior work benchmarks both meters, and
-its best result (R² 0.8641) is on **Meter 2**. To compare like for like we need
-`62_DKA_MasterMeter2_*` extracted from the yearly files.
+Prior work on this site benchmarks both master meters, and its best published result
+(R² 0.8641, MSE 22.41) is on **Meter 2**; Meter 1 reached R² 0.8015, MSE 96.13. Both meters are
+present in the yearly files, so a like-for-like comparison is available without extra acquisition
+work.
 
 ## 8. The 5 Vs
 

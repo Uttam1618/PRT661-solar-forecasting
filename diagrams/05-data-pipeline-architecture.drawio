@@ -1,0 +1,135 @@
+<mxfile host="app.diagrams.net" agent="PRT661" version="24.0.0">
+  <diagram name="Data Pipeline Architecture" id="pipeline">
+    <mxGraphModel dx="1400" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Data Pipeline Architecture — Layered View" style="text;html=1;fontSize=20;fontStyle=1;align=center;fontColor=#1F2A5A;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="1180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sub" value="Batch pipeline · 5-minute source resolution · scheduled execution · all open-source components" style="text;html=1;fontSize=12;align=center;fontColor=#5A6480;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="1180" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="hdrL" value="LAYER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#1F2A5A;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="90" width="180" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="hdrC" value="COMPONENT AND OPERATION" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="90" width="620" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="hdrF" value="FORMAT" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="90" width="170" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="hdrV" value="VOLUME / CADENCE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1F2A5A;strokeColor=#FFFFFF;fontColor=#FFFFFF;fontSize=11;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="90" width="210" height="34" as="geometry" />
+        </mxCell>
+
+        <mxCell id="L1" value="1 · SOURCE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="124" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C1" value="Desert Knowledge Australia Solar Centre portal&#10;Site meters · weather station · BESS (2024+)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;align=left;spacingLeft=12;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="124" width="620" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="F1" value="CSV over HTTPS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="124" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="V1" value="19 files · ~3.0 GB&#10;refreshed per assessment" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="124" width="210" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="L2" value="2 · INGESTION" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="204" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C2" value="ingest.py&#10;Download · checksum · verify column groups present · record provenance (source URL, download date)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="204" width="620" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="F2" value="CSV → local raw zone" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="204" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="V2" value="Batch&#10;on demand" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="204" width="210" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="L3" value="3 · RAW ZONE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="284" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="C3" value="Immutable landing area — never edited in place, excluded from version control" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="284" width="620" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="F3" value="CSV as received" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="284" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="V3" value="~1.9M rows&#10;197–210 columns" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="284" width="210" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="L4" value="4 · PROCESSING" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EEF2F7;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="354" width="180" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="C4" value="clean.py  ·  pandas / Polars&#10;· deduplicate year-boundary rows&#10;· reconcile 197 → 210 schema (BESS columns null before 2024)&#10;· difference cumulative energy counter&#10;· normalise power sign · drop wind speed (52% missing)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="354" width="620" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="F4" value="Parquet&#10;partitioned by year" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="354" width="170" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="V4" value="Full rebuild&#10;per data refresh" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#1F2A5A;fontColor=#1F2A5A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="354" width="210" height="105" as="geometry" />
+        </mxCell>
+
+        <mxCell id="L5" value="5 · FEATURE BUILD" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EAF7EF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="459" width="180" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="C5" value="features.py&#10;Lagged generation · rolling means · ramp rate · array age and degradation index · hour, month, solar position · weather covariates" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=11;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="459" width="620" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="F5" value="Parquet&#10;modelling table" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="459" width="170" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="V5" value="Rebuilt when feature&#10;definitions change" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="459" width="210" height="95" as="geometry" />
+        </mxCell>
+
+        <mxCell id="L6" value="6 · ANALYTICS / ML" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#EAF7EF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="554" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="C6" value="train.py · evaluate.py&#10;LightGBM baseline and deep benchmark · walk-forward (rolling origin) validation · R², MAE, RMSE, MAPE&#10;Target to beat: R² 0.8641 / MSE 22.41 (Meter 2, prior work)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=11;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="554" width="620" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="F6" value="Model artefact&#10;+ metrics log" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="554" width="170" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="V6" value="Scheduled retrain&#10;or on drift" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="554" width="210" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="L7" value="7 · CONSUMPTION" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FDF0F0;strokeColor=#B3132E;fontColor=#B3132E;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="644" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="C7" value="dashboard.py  ·  Streamlit&#10;Forecast vs actual · error by time of day · recommended battery charge / discharge windows" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B3132E;fontColor=#B3132E;fontSize=11;align=left;spacingLeft=12;" vertex="1" parent="1">
+          <mxGeometry x="220" y="644" width="620" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="F7" value="Interactive web app" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B3132E;fontColor=#B3132E;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="840" y="644" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="V7" value="Refreshed after&#10;each pipeline run" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#B3132E;fontColor=#B3132E;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="644" width="210" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="orch" value="Orchestration — Prefect / cron triggers layers 2 to 7 as one scheduled batch run   ·   run logs and data-quality assertions written at every layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EAF7EF;strokeColor=#2E8B57;fontColor=#1B5E3A;fontSize=11;fontStyle=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="745" width="1180" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="why" value="Why batch, not streaming — the dispatch decision can wait for the next scheduled run, so per the Week 2 rule of thumb the pipeline is batch. Cost and repeatability are prioritised over latency." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#8A90A5;fontColor=#3C4256;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="795" width="1180" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="a1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#1F2A5A;strokeWidth=2;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L1" target="L2"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="20" y="164" /><mxPoint x="20" y="244" /></Array></mxGeometry></mxCell>
+        <mxCell id="a2" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#1F2A5A;strokeWidth=2;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L2" target="L3"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="20" y="244" /><mxPoint x="20" y="319" /></Array></mxGeometry></mxCell>
+        <mxCell id="a3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#1F2A5A;strokeWidth=2;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L3" target="L4"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="20" y="319" /><mxPoint x="20" y="406" /></Array></mxGeometry></mxCell>
+        <mxCell id="a4" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L4" target="L5"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="20" y="406" /><mxPoint x="20" y="506" /></Array></mxGeometry></mxCell>
+        <mxCell id="a5" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#2E8B57;strokeWidth=2;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L5" target="L6"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="20" y="506" /><mxPoint x="20" y="599" /></Array></mxGeometry></mxCell>
+        <mxCell id="a6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#B3132E;strokeWidth=2;endArrow=block;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="1" source="L6" target="L7"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="20" y="599" /><mxPoint x="20" y="684" /></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
