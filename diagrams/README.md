@@ -53,14 +53,6 @@ Workflow Automation
 Governance and Monitoring
 ```
 
-## Export procedure
-
-1. Open the `.drawio` file at [app.diagrams.net](https://app.diagrams.net)
-2. **File → Export as → PNG**
-3. Zoom 200%, transparent background off, border width 10
-4. Save into this folder using the same base name
-5. Commit both the source and the PNG
-
 ## Revision history
 
 | Version | Date | Change | Author |
