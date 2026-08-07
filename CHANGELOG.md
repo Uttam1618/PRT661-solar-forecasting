@@ -23,3 +23,13 @@ Format: `YYYY-MM-DD — decision — reason — approved by`
 
 - **2026-08-01** — `Wind_Speed` excluded from the candidate feature set. — 52.4% missing in the
   source data; also excluded by Thuseethan et al. (2025) on this site. — Uttam Shrestha
+
+- **2026-08-07** — A1 submission deadline extended by the unit coordinator from 9 August to
+  12 August, 23:29. — Internal schedule rebaselined accordingly: section drafts 10 August,
+  assembly 11 August, compliance pass and submission 12 August. Sprint 1 extended to 12 August and
+  Sprint 2 moved to start 13 August. — Uttam Shrestha
+
+- **2026-08-07** — Raw data reorganised into `data/raw/` (19 yearly extracts) and
+  `data/reference/` (MasterMeter1 cross-check file). — Makes the directory layout match the
+  documented storage design and prevents the reference file being mistaken for the primary
+  source. — Uttam Shrestha

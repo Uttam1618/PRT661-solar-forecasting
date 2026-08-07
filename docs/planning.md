@@ -9,7 +9,7 @@ Jira board: *link to be added*
 
 | Assessment | Focus | Weight | Week | Date |
 |---|---|---|---|---|
-| A1 | Project Proposal and Design | 10% | 3 | 9 Aug 2026 |
+| A1 | Project Proposal and Design | 10% | 3 | 12 Aug 2026, 23:29 (extended from 9 Aug) |
 | A2 | Progress Report and Development | 20% | 6 | Week of 24 Aug |
 | A3 | Group Technical Demonstration | 30% | 9 | Week of 14 Sep |
 | A4 | Final Professional Report | 40% | 12 | TBC — confirm on Learnline |
@@ -20,8 +20,8 @@ Semester runs 20 July – 23 September 2026. Week 1 = 20–26 July.
 
 | Sprint | Covers | Start | End |
 |---|---|---|---|
-| Sprint 1 | A1 — Proposal and Design | 20 Jul | 9 Aug |
-| Sprint 2 | A2 — Progress and Development | 10 Aug | 30 Aug |
+| Sprint 1 | A1 — Proposal and Design | 20 Jul | 12 Aug |
+| Sprint 2 | A2 — Progress and Development | 13 Aug | 30 Aug |
 | Sprint 3 | A3 — Demonstration | 31 Aug | 20 Sep |
 | Sprint 4 | A4 — Final Report | 21 Sep | TBC |
 
@@ -29,7 +29,7 @@ Semester runs 20 July – 23 September 2026. Week 1 = 20–26 July.
 
 | Epic | Start | Due | Primary owner |
 |---|---|---|---|
-| Data Acquisition | 20 Jul | 9 Aug | Data Engineer |
+| Data Acquisition | 20 Jul | 12 Aug | Data Engineer |
 | Data Storage | 3 Aug | 23 Aug | Data Engineer |
 | Data Processing | 10 Aug | 30 Aug | Data Engineer |
 | Feature Engineering | 17 Aug | 6 Sep | Modelling Lead |

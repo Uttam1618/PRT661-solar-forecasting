@@ -53,7 +53,8 @@ These eight names are used identically in the Jira board and in
 | 9. References | 100 | Uttam Shrestha |
 | **Total** | **1000** | |
 
-Drafts due **6 August**. Assembly, formatting and submission by the Project Lead on **8 August**.
+Drafts due **10 August**. Assembly and formatting by the Project Lead on **11 August**, with a
+compliance pass and submission ahead of the deadline of **12 August, 23:29**.
 
 Word totals per member: Uttam 280 plus assembly, Abhishek 240, Sarin 250, Yogesh 230.
 
