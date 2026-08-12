@@ -48,3 +48,4 @@ Thumbs.db
 # ---- Course materials (copyright — do not redistribute) ----
 Weekly Lecture Slides/
 *Lect*.pdf
+.DS_Store
