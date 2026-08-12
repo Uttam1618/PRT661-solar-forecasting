@@ -1,6 +1,7 @@
 # Project Planning
 
 PRT661 Solar Generation Forecasting · Semester 2, 2026
+
 Jira board: *link to be added*
 
 ---
@@ -12,9 +13,13 @@ Jira board: *link to be added*
 | A1 | Project Proposal and Design | 10% | 3 | 12 Aug 2026, 23:29 (extended from 9 Aug) |
 | A2 | Progress Report and Development | 20% | 6 | Week of 24 Aug |
 | A3 | Group Technical Demonstration | 30% | 9 | Week of 14 Sep |
-| A4 | Final Professional Report | 40% | 12 | TBC — confirm on Learnline |
+| A4 | Final Professional Report | 40% | 12 | Week 12, 5–11 Oct 2026 — confirm exact date on Learnline |
 
-Semester runs 20 July – 23 September 2026. Week 1 = 20–26 July.
+
+Semester runs 20 July – 11 October 2026.
+
+Week 1 = 20–26 July, so Week 3 = 3–9 Aug,
+Week 6 = 24–30 Aug, Week 9 = 14–20 Sep and Week 12 = 5–11 Oct.
 
 ## Sprints
 
@@ -23,7 +28,7 @@ Semester runs 20 July – 23 September 2026. Week 1 = 20–26 July.
 | Sprint 1 | A1 — Proposal and Design | 20 Jul | 12 Aug |
 | Sprint 2 | A2 — Progress and Development | 13 Aug | 30 Aug |
 | Sprint 3 | A3 — Demonstration | 31 Aug | 20 Sep |
-| Sprint 4 | A4 — Final Report | 21 Sep | TBC |
+| Sprint 4 | A4 — Final Report | 21 Sep | 11 Oct |
 
 ## Epic schedule
 
@@ -59,7 +64,7 @@ These eight names are used identically in the Jira board and in the Draw.io work
 | 12 | Define pipeline orchestration approach | Workflow Automation | To Do |
 | 13 | Draft risk register | Governance and Monitoring | Done |
 | 14 | Draft ethics, privacy and security section | Governance and Monitoring | Done |
-| 15 | Confirm AWS Academy access for all five members | Governance and Monitoring | To Do |
+| 15 | Confirm AWS Academy access for all four members | Governance and Monitoring | To Do |
 | 16 | Assemble and format A1 report | Governance and Monitoring | In Progress |
 
 *Update statuses to match the Jira board before submission.*
