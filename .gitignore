@@ -1,7 +1,7 @@
 # ---- Data (large files, do not commit) ----
-data/*
-!data/.gitkeep
-!data/README.md
+Datasets/*
+!Datasets/.gitkeep
+!Datasets/README.md
 *.csv
 *.parquet
 *.duckdb
