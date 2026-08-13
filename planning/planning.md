@@ -1,8 +1,8 @@
 # Project Planning
 
-PRT661 Solar Generation Forecasting · Semester 2, 2026
+PRT661 Solar Generation Forecasting
 
-Jira board: *link to be added*
+Jira board: https://uttamshrestha1618.atlassian.net/jira/software/projects/SCRUM/boards/1
 
 ---
 
@@ -10,7 +10,7 @@ Jira board: *link to be added*
 
 | Assessment | Focus | Weight | Week | Date |
 |---|---|---|---|---|
-| A1 | Project Proposal and Design | 10% | 3 | 12 Aug 2026, 23:29 (extended from 9 Aug) |
+| A1 | Project Proposal and Design | 10% | 3 | 16 Aug 2026 (extended from 9 Aug) |
 | A2 | Progress Report and Development | 20% | 6 | Week of 24 Aug |
 | A3 | Group Technical Demonstration | 30% | 9 | Week of 14 Sep |
 | A4 | Final Professional Report | 40% | 12 | Week 12, 5–11 Oct 2026 — confirm exact date on Learnline |
@@ -23,28 +23,28 @@ Week 6 = 24–30 Aug, Week 9 = 14–20 Sep and Week 12 = 5–11 Oct.
 
 ## Sprints
 
-| Sprint | Covers | Start | End |
-|---|---|---|---|
-| Sprint 1 | A1 — Proposal and Design | 20 Jul | 12 Aug |
-| Sprint 2 | A2 — Progress and Development | 13 Aug | 30 Aug |
-| Sprint 3 | A3 — Demonstration | 31 Aug | 20 Sep |
-| Sprint 4 | A4 — Final Report | 21 Sep | 11 Oct |
+| Sprint | Covers | Start | End | Goal |
+|---|---|---|---|---|
+| Sprint 1 | A1 — Proposal and Design | 20 Jul | 16 Aug | Deliver the A1 proposal and design: repository, diagrams, populated board, report |
+| Sprint 2 | A2: Progress and Development | 17 Aug | 30 Aug | Build the data pipeline and deliver the A2 progress report |
+| Sprint 3 | A3: Demonstration | 31 Aug | 20 Sep | Train and evaluate models, build the dashboard, deliver the demonstration |
+| Sprint 4 | A4: Final Report | 21 Sep | 11 Oct | Finalise the system and submit the final professional report |
 
 ## Epic schedule
 
 | Epic | Start | Due | Primary owner |
 |---|---|---|---|
-| Data Acquisition | 20 Jul | 12 Aug | Data Engineer |
-| Data Storage | 3 Aug | 23 Aug | Data Engineer |
-| Data Processing | 10 Aug | 30 Aug | Data Engineer |
-| Feature Engineering | 17 Aug | 6 Sep | Modelling Lead |
-| Analytics and Machine Learning | 24 Aug | 20 Sep | Modelling Lead |
-| Visualisation | 7 Sep | 23 Sep | Architecture and Design |
-| Workflow Automation | 7 Sep | 23 Sep | Project Lead |
-| Governance and Monitoring | 20 Jul | 23 Sep | Documentation and Governance |
+| Data Acquisition | 20 Jul | 16 Aug | Abhishek Tamang |
+| Data Storage | 3 Aug | 23 Aug | Abhishek Tamang |
+| Data Processing | 10 Aug | 30 Aug | Sarin Uprety |
+| Feature Engineering | 17 Aug | 6 Sep | Sarin Uprety |
+| Analytics and Machine Learning | 24 Aug | 20 Sep | Yogesh Basnet |
+| Visualisation | 7 Sep | 23 Sep | Yogesh Basnet |
+| Workflow Automation | 7 Sep | 23 Sep | Uttam Shrestha |
+| Governance and Monitoring | 20 Jul | 23 Sep | Uttam Shrestha |
 
 These eight names are used identically in the Jira board and in the Draw.io workflow diagram
-(`diagrams/02-workflow-plan.drawio`).
+(`../Workflow_Diagrams/02-workflow-plan.drawio`).
 
 ## Sprint 1 plan — A1
 
@@ -67,7 +67,7 @@ These eight names are used identically in the Jira board and in the Draw.io work
 | 15 | Confirm AWS Academy access for all four members | Governance and Monitoring | To Do |
 | 16 | Assemble and format A1 report | Governance and Monitoring | In Progress |
 
-*Update statuses to match the Jira board before submission.*
+*Statuses verified against the Jira board on 12 August 2026.*
 
 ## Dependencies
 
