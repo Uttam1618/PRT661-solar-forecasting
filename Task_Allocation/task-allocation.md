@@ -1,9 +1,10 @@
 # Task Allocation and Team Structure
 
-**Group 4 — four members.** The assessment brief specifies groups of five; confirmation has been
-sought from the unit lecturer that a group of four is approved.
+**Group 4 — four members.** The assessment brief specifies groups of 3–5 students, so a group of
+four is compliant.
 
-> **Status:** roles proposed, awaiting group confirmation. GitHub usernames still to be collected.
+> **Status:** roles confirmed 7 August 2026. All four members have access to the GitHub repository
+> and the Jira board, and every Jira task is assigned to a named member.
 
 ---
 
@@ -12,13 +13,12 @@ sought from the unit lecturer that a group of four is approved.
 | Role | Member | GitHub | Owns |
 |---|---|---|---|
 | Project Lead / PM | **Uttam Shrestha** | `Uttam1618` | Jira board, sprint plan, governance, timeline, report assembly |
-| Data Engineer | **Abhishek Tamang** | *TBC* | Acquisition, storage design, ingestion pipeline |
-| Data and Feature Engineer | **Sarin Uprety** | *TBC* | Cleaning, schema reconciliation, feature engineering |
-| Modelling and Visualisation Lead | **Yogesh Basnet** | *TBC* | Models, evaluation protocol, dashboard, diagrams |
+| Data Engineer | **Abhishek Tamang** | `Abhisek000` | Acquisition, storage design, ingestion pipeline |
+| Data and Feature Engineer | **Sarin Uprety** | `Sarin751` | Cleaning, schema reconciliation, feature engineering |
+| Modelling and Visualisation Lead | **Yogesh Basnet** | `viperx-ux` | Models, evaluation protocol, dashboard, diagrams |
 
-With four members rather than five, the Architecture and Design and Documentation and Governance
-roles from the original five-person plan are distributed: diagram maintenance sits with the
-Modelling and Visualisation Lead, and documentation and governance sits with the Project Lead.
+Each member owns two epics spanning the pipeline order, with diagram maintenance sitting with the
+Modelling and Visualisation Lead and documentation and governance with the Project Lead.
 
 ## Epic ownership
 
@@ -36,7 +36,7 @@ Two epics each, following the pipeline order.
 | Governance and Monitoring | Uttam Shrestha |
 
 These eight names are used identically in the Jira board and in
-`diagrams/02-workflow-plan.drawio`.
+[`../Workflow_Diagrams/02-workflow-plan.drawio`](../Workflow_Diagrams/02-workflow-plan.drawio).
 
 ## A1 report sections by owner
 
@@ -53,19 +53,30 @@ These eight names are used identically in the Jira board and in
 | 9. References | 100 | Uttam Shrestha |
 | **Total** | **1000** | |
 
-Drafts due **10 August**. Assembly and formatting by the Project Lead on **11 August**, with a
-compliance pass and submission ahead of the deadline of **12 August, 23:29**.
+Drafts due **14 August**. Assembly and formatting by the Project Lead on **15 August**, with a
+compliance pass and submission ahead of the deadline of **16 August**.
 
 Word totals per member: Uttam 280 plus assembly, Abhishek 240, Sarin 250, Yogesh 230.
 
 ## Contribution expectations
 
-Recorded in full in [`../CONTRIBUTING.md`](../CONTRIBUTING.md). In summary, every member:
+Every member:
 
 - makes regular visible commits to this repository
 - owns named tasks in Jira with an owner, due date and status
-- attends the weekly stand-up or posts an async update
+- attends the weekly stand-up or posts an asynchronous update
 - reviews at least one pull request per sprint
+- records decisions in [`../Project_Planning_Records/`](../Project_Planning_Records/) rather than
+  agreeing them verbally
+
+## Governance
+
+- **Decision rights** — technical decisions sit with the epic owner; scope and schedule decisions
+  sit with the Project Lead after group discussion.
+- **Definition of done** — work is complete when it is committed, its Jira task is moved to Done,
+  and any affected documentation is updated in the same commit.
+- **Branching** — work on `main` for documentation; feature branches for code from A2 onward.
+- **Data handling** — no raw data, credentials or `.env` files are ever committed.
 
 ## Workload balance
 
@@ -75,5 +86,5 @@ delegate individual tasks — recorded in Jira, not agreed verbally.
 
 ## Change history
 
-Changes to roles or allocation are logged in [`../CHANGELOG.md`](../CHANGELOG.md) with a date and
-a reason.
+Changes to roles or allocation are recorded in
+[`../Project_Planning_Records/`](../Project_Planning_Records/), dated and with a stated reason.
