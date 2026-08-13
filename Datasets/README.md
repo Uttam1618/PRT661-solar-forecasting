@@ -1,7 +1,7 @@
-# Data directory
+# Datasets
 
 **Contents of this folder are not committed to Git.** Individual source files range from
-25 MB to 390 MB, exceeding GitHub's 100 MB per-file limit, and raw data does not belong in
+25 MB to 390 MB, exceeding GitHub's 100 MB per file limit, and raw data does not belong in
 version control.
 
 ## Layout
@@ -23,7 +23,7 @@ The 19 yearly extracts. These are the only files containing **all** required col
 | Weather station | `101_DKA_WeatherStation_` | 9 |
 | BESS and site totals *(2024 onward)* | `239_` `240_` `241_` `242_` | 13 |
 
-Files here are **immutable**. Never edit them in place — all cleaning is scripted in `/src` so
+Files here are **immutable**. Never edit them in place, all cleaning is scripted in `/src` so
 every downstream output can be regenerated from these.
 
 ### `reference/` — validation only
@@ -36,12 +36,7 @@ extracting MasterMeter1 from the yearly files and differencing the cumulative en
 result should match this file over the overlapping period. That check addresses risk T3 in
 [`../docs/risk-register.md`](../docs/risk-register.md).
 
-## How to obtain the data
 
-1. Go to https://dkasolarcentre.com.au/download?location=alice-springs
-2. Download the yearly Alice Springs extracts (2008–present) into `data/raw/`
-3. Optionally download the `96-Site_DKA-MasterMeter1` extract into `data/reference/`
-4. Record the download date in [`../docs/data-quality-summary.md`](../docs/data-quality-summary.md)
 
 ## What we know about it
 
@@ -50,4 +45,5 @@ schema drift and measured missingness.
 
 ## Attribution
 
-Data © Desert Knowledge Australia Solar Centre. Used under their public data terms.
+Data © [Desert Knowledge Australia Solar Centre](https://dkasolarcentre.com.au/download?location=alice-springs),
+Alice Springs. Used under their public data terms2
