@@ -1,7 +1,7 @@
 # PRT661 — Solar Generation Forecasting (DKASC Alice Springs)
 
 Semester 2, 2026 · Charles Darwin University · Data Science Practice (PRT661)
-**Theme 2 — Predictive Analytics and Forecasting**
+**Theme 2: Predictive Analytics and Forecasting**
 
 ---
 
@@ -13,6 +13,9 @@ across 2008–2026, with degradation-aware features and explicit ramp-event hand
 
 **The decision this supports:** when should the battery charge, and when should it discharge?
 
+Everything upstream — acquisition, storage, processing, features, models, dashboard — exists to
+serve that decision.
+
 ## Relationship to prior work
 
 This project builds on and cites:
@@ -22,13 +25,19 @@ This project builds on and cites:
 > *IEEE Open Journal of the Computer Society*, 6, 884–895.
 > https://doi.org/10.1109/OJCS.2025.3580339
 
-That paper uses the same site and task. We extend it in three ways:
+That paper forecasts generation at the same site, but for a different purpose: it evaluates
+whether First Nations seasonal information improves predictive accuracy. This project forecasts in
+order to support an operational decision — battery dispatch — and differs in four ways:
 
 | | Prior work | This project |
 |---|---|---|
+| Purpose | Model accuracy for its own sake | Forecast drives battery charge/discharge decisions |
 | Time span | 2019–2024 (465,078 rows) | 2008–2026 (~1.77M rows) |
-| Battery | Not available (predates 2024 BESS install) | BESS state-of-charge and totals included |
+| Battery | Not available (predates the 2024 BESS install) | BESS state-of-charge and totals included |
 | Open problem addressed | High error at peak irradiance and dawn/dusk; per-feature influence not analysed | Ramp-event handling and feature importance |
+
+The prior work's First Nations seasonal calendars are **not** reproduced here. The reasoning is
+recorded in [`Supporting_Documents/ethics-privacy-security.md`](Supporting_Documents/ethics-privacy-security.md).
 
 **Benchmark to beat** (their published results on this site):
 
@@ -46,11 +55,12 @@ That paper uses the same site and task. We extend it in three ways:
 | Data and Feature Engineer | Sarin Uprety | [@Sarin751](https://github.com/Sarin751) |
 | Modelling and Visualisation Lead | Yogesh Basnet | [@viperx-ux](https://github.com/viperx-ux) |
 
-Full allocation, epic ownership and report sections: [`docs/task-allocation.md`](docs/task-allocation.md)
+Full allocation, epic ownership and report sections:
+[`Task_Allocation/task-allocation.md`](Task_Allocation/task-allocation.md)
 
 ## Project management
 
-Jira board: *link to be added*
+Jira board: https://uttamshrestha1618.atlassian.net/jira/software/projects/SCRUM/boards/1
 
 Workflow stages (these names are used identically in the Draw.io diagrams and as Jira epics):
 
@@ -63,14 +73,21 @@ Workflow stages (these names are used identically in the Draw.io diagrams and as
 7. Workflow Automation
 8. Governance and Monitoring *(cross-cutting)*
 
+Schedule, sprints and epic dates: [`Planning/planning.md`](Planning/planning.md)
+
 ## Repository structure
 
+Folders map directly to the documentation artefacts required by the assessment.
+
 ```
-docs/        Assessment reports, data-quality summaries, planning records
-data/        Local data directory — contents are NOT committed (see data/README.md)
-diagrams/    Draw.io sources (.drawio) and exported PNGs
-notebooks/   Exploratory analysis
-src/         Reusable pipeline and modelling code
+Assessment_Reports/         A1-A4 submissions as PDF
+Architecture_Diagrams/      Four architecture diagrams, sources and PNG exports
+Workflow_Diagrams/          Workflow plan, source and PNG export
+Planning/                   Milestones, sprints, epic schedule, sprint plans
+Task_Allocation/            Roles, epic ownership, report sections, governance
+Project_Planning_Records/   Dated meeting and decision records
+Supporting_Documents/       Risk register, ethics and privacy, data quality
+Datasets/                   Local data directory, contents are NOT committed
 ```
 
 ## Data
@@ -78,32 +95,28 @@ src/         Reusable pipeline and modelling code
 Source: [Desert Knowledge Australia Solar Centre](https://dkasolarcentre.com.au/download?location=alice-springs) — Alice Springs.
 
 Raw data is **not committed to this repository** (individual files are 25–390 MB, exceeding
-GitHub limits). See [`data/README.md`](data/README.md) for how to obtain it, and
-[`docs/data-quality-summary.md`](docs/data-quality-summary.md) for what we know about it.
+GitHub limits). See [`Datasets/README.md`](Datasets/README.md) for the directory layout, and
+[`Supporting_Documents/data-quality-summary.md`](Supporting_Documents/data-quality-summary.md)
+for row counts, coverage, schema drift and measured missingness.
 
 ## Reproducing this work
 
-*To be completed as the pipeline is built.*
-
-```bash
-# Planned
-pip install -r requirements.txt
-python src/build_dataset.py
-```
+*To be completed as the pipeline is built in A2.*
 
 ## Assessments
 
-| | Focus | Due | Status |
-|---|---|---|---|
-| A1 | Project Proposal and Design | Week 3 | In progress |
-| A2 | Progress Report and Development | Week 6 | Not started |
-| A3 | Group Technical Demonstration | Week 9 | Not started |
-| A4 | Final Professional Report | Week 12 | Not started |
+| | Focus | Weight | Due | Status |
+|---|---|---|---|---|
+| A1 | Project Proposal and Design | 10% | 16 Aug 2026 | In progress |
+| A2 | Progress Report and Development | 20% | Week 6 | Not started |
+| A3 | Group Technical Demonstration | 30% | Week 9 | Not started |
+| A4 | Final Professional Report | 40% | Week 12 | Not started |
 
-## Contributing
+## Contribution expectations
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for branch strategy, review rules, and contribution
-expectations.
+Recorded in the governance section of
+[`Task_Allocation/task-allocation.md`](Task_Allocation/task-allocation.md): decision rights,
+definition of done, branching, and data handling.
 
 ## Licence and attribution
 
