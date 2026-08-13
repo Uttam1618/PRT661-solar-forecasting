@@ -1,41 +1,44 @@
-# Architecture and Design Artefacts
+# Architecture and Design Diagrams
 
-Every diagram is maintained as an editable `.drawio` source **and** an exported `.png`.
+Every diagram is maintained as an editable `.drawio` source and an exported `.png`.
 Sources are edited at [app.diagrams.net](https://app.diagrams.net).
 
-Diagrams are updated as the project evolves. Each revision is recorded below and the updated
-version is included in both this repository and the relevant assessment report.
+Diagrams are updated as the project evolves. Each change is recorded in the revision history below
+and the updated version is included in both this repository and the relevant assessment report.
 
 ---
 
 ## Coverage against the assessment requirements
 
-| Required artefact | File | Status |
-|---|---|---|
-| High-level system architecture | `01-system-architecture.drawio` | v1.0 |
-| Data pipeline architecture | `05-data-pipeline-architecture.drawio` | v1.0 |
-| Workflow diagram | `02-workflow-plan.drawio` | v1.0 |
-| Database or data storage design | `03-data-storage-design.drawio` | v1.0 |
-| Component interaction diagram | `04-component-interaction.drawio` | v1.0 |
-| Deployment architecture *(if applicable)* | — | Deferred, see below |
+| Required artefact | File |
+|---|---|
+| High-level system architecture | `01-system-architecture` |
+| Data pipeline architecture | `05-data-pipeline-architecture` |
+| Database or data storage design | `03-data-storage-design` |
+| Component interaction | `04-component-interaction` |
+| Workflow diagram | [`../Workflow_Diagrams/02-workflow-plan`](../Workflow_Diagrams/) |
+| Deployment architecture *(if applicable)* | Deferred to A3 — see below |
 
 ### Deployment architecture
 
 Not produced for A1. At this stage nothing is deployed — the pipeline runs locally and the
-dashboard does not yet exist, so a deployment diagram would describe an intention rather than a
+dashboard does not yet exist — so a deployment diagram would describe an intention rather than a
 design. The brief marks this artefact *"if applicable"*.
 
-It will be produced for **A3**, once the Streamlit dashboard and scheduled pipeline exist and
-there is a real execution environment to describe.
+It will be produced for **A3**, once the dashboard and scheduled pipeline exist and there is a
+real execution environment to describe.
 
 ## Which diagrams appear in which report
 
-| Report | Figures included | Rationale |
-|---|---|---|
-| A1 | Fig. 1 — system architecture · Fig. 2 — workflow plan | The 1000-word limit does not allow more; the remaining diagrams are referenced by repository link |
-| A2 | + data pipeline, data storage design | Implementation begins, so pipeline detail becomes relevant |
-| A3 | + component interaction, deployment | Demonstration requires the runtime view |
-| A4 | All, updated to as-built | Final report documents the delivered system |
+| Report | Figures included |
+|---|---|
+| A1 | System architecture, workflow plan |
+| A2 | + data pipeline, data storage design |
+| A3 | + component interaction, deployment |
+| A4 | All, updated to as-built |
+
+The 1000-word limit on A1 does not allow more than two figures; the remaining diagrams are
+referenced by repository link.
 
 ## Naming contract
 
@@ -55,6 +58,8 @@ Governance and Monitoring
 
 ## Revision history
 
-| Version | Date | Change | Author |
-|---|---|---|---|
-| 1.0 | 1 Aug 2026 | Initial set created for A1 — system architecture, workflow plan, storage design, component interaction, data pipeline | Uttam Shrestha |
+| Date | Change | Author |
+|---|---|---|
+| 1 Aug 2026 | Initial set created for A1 — system architecture, workflow plan, storage design, component interaction | Uttam Shrestha |
+| 7 Aug 2026 | Data pipeline architecture added as a separate diagram; all five exported to PNG at 200% zoom | Uttam Shrestha |
+| 12 Aug 2026 | Diagrams reorganised into `Architecture_Diagrams/` and `Workflow_Diagrams/`; duplicated `.drawio.png` extensions corrected | Uttam Shrestha |
