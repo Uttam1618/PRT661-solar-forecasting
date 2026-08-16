@@ -28,56 +28,56 @@
           <mxGeometry x="1040" y="90" width="240" height="45" as="geometry" />
         </mxCell>
 
-        <mxCell id="r1" value="Data Acquisition&#10;Data Engineer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r1" value="Data Acquisition&#10;Abhishek Tamang" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="145" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b1" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A78C4;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="330" y="158" width="220" height="24" as="geometry" />
         </mxCell>
 
-        <mxCell id="r2" value="Data Storage&#10;Data Engineer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r2" value="Data Storage&#10;Abhishek Tamang" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="195" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A78C4;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="330" y="208" width="460" height="24" as="geometry" />
         </mxCell>
 
-        <mxCell id="r3" value="Data Processing&#10;Data Engineer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r3" value="Data Processing&#10;Sarin Uprety" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="245" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b3" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4A78C4;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="570" y="258" width="220" height="24" as="geometry" />
         </mxCell>
 
-        <mxCell id="r4" value="Feature Engineering&#10;Modelling Lead" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r4" value="Feature Engineering&#10;Sarin Uprety · Uttam Shrestha" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="295" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E8B57;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="570" y="308" width="460" height="24" as="geometry" />
         </mxCell>
 
-        <mxCell id="r5" value="Analytics and Machine Learning&#10;Modelling Lead" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r5" value="Analytics and Machine Learning&#10;Yogesh Basnet · Uttam Shrestha" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="345" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2E8B57;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="570" y="358" width="700" height="24" as="geometry" />
         </mxCell>
 
-        <mxCell id="r6" value="Visualisation&#10;Architecture and Design" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r6" value="Visualisation&#10;Yogesh Basnet" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="395" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8A33D;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="810" y="408" width="460" height="24" as="geometry" />
         </mxCell>
 
-        <mxCell id="r7" value="Workflow Automation&#10;Project Lead" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r7" value="Workflow Automation&#10;Uttam Shrestha" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F7F7F9;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="445" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b7" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8A33D;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="810" y="458" width="460" height="24" as="geometry" />
         </mxCell>
 
-        <mxCell id="r8" value="Governance and Monitoring&#10;Documentation and Governance" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
+        <mxCell id="r8" value="Governance and Monitoring&#10;Uttam Shrestha" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#C3C7D4;fontColor=#1F2A5A;fontSize=11;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="40" y="495" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="b8" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#B3132E;strokeColor=none;" vertex="1" parent="1">

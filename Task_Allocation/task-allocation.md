@@ -17,23 +17,30 @@ four is compliant.
 | Data and Feature Engineer | **Sarin Uprety** | `Sarin751` | Cleaning, schema reconciliation, feature engineering |
 | Modelling and Visualisation Lead | **Yogesh Basnet** | `viperx-ux` | Models, evaluation protocol, dashboard, diagrams |
 
-Each member owns two epics spanning the pipeline order, with diagram maintenance sitting with the
-Modelling and Visualisation Lead and documentation and governance with the Project Lead.
+Each member is accountable for two epics spanning the pipeline order, with diagram maintenance
+sitting with the Modelling and Visualisation Lead and documentation and governance with the
+Project Lead. The Project Lead additionally holds named tasks inside Feature Engineering and
+Analytics and Machine Learning as second member, without displacing their accountable owners.
 
 ## Epic ownership
 
 Two epics each, following the pipeline order.
 
-| Epic | Owner |
-|---|---|
-| Data Acquisition | Abhishek Tamang |
-| Data Storage | Abhishek Tamang |
-| Data Processing | Sarin Uprety |
-| Feature Engineering | Sarin Uprety |
-| Analytics and Machine Learning | Yogesh Basnet |
-| Visualisation | Yogesh Basnet |
-| Workflow Automation | Uttam Shrestha |
-| Governance and Monitoring | Uttam Shrestha |
+| Epic | Accountable owner | Second member |
+|---|---|---|
+| Data Acquisition | Abhishek Tamang | |
+| Data Storage | Abhishek Tamang | |
+| Data Processing | Sarin Uprety | |
+| Feature Engineering | Sarin Uprety | Uttam Shrestha |
+| Analytics and Machine Learning | Yogesh Basnet | Uttam Shrestha |
+| Visualisation | Yogesh Basnet | |
+| Workflow Automation | Uttam Shrestha | |
+| Governance and Monitoring | Uttam Shrestha | |
+
+The accountable owner sets direction and answers for the epic. A second member, where named,
+holds tasks within it — this implements risk P4's mitigation that every epic has a named owner
+and one other member familiar with it. Epic ownership is mirrored on the Jira board: each of the
+eight epics carries its accountable owner as the Jira assignee.
 
 These eight names are used identically in the Jira board and in
 [`../Workflow_Diagrams/02-workflow-plan.drawio`](../Workflow_Diagrams/02-workflow-plan.drawio).
@@ -80,9 +87,13 @@ Every member:
 
 ## Workload balance
 
-Each member owns two epics, one to two report sections, and an independent evidence trail in both
-GitHub and Jira. Where an epic spans multiple sprints the owner remains accountable but may
-delegate individual tasks — recorded in Jira, not agreed verbally.
+Each member is accountable for two epics, one to two report sections, and an independent evidence
+trail in both GitHub and Jira. Where an epic spans multiple sprints the owner remains accountable
+but may delegate individual tasks — recorded in Jira, not agreed verbally.
+
+The Project Lead carries two additional Sprint 2 tasks as second member: SCRUM-29 in Feature
+Engineering and SCRUM-30 in Analytics and Machine Learning. Both arose from the diagram review of
+16 August 2026 and neither reduces the work held by Sarin Uprety or Yogesh Basnet.
 
 ## Change history
 

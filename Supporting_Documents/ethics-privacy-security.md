@@ -76,7 +76,7 @@ concern here is calibration and honest communication of uncertainty.
 |---|---|
 | Credentials | Never committed. `.gitignore` excludes `.env`, `*.pem`, `*.key` and credential files. AWS credentials, API keys and tokens are never pasted into reports, the repository, or AI tools. |
 | Exposure response | A committed credential is rotated immediately and reported to the team. Deleting the file in a later commit does not remove it from history. |
-| Repository access | Public repository containing no sensitive material. Write access limited to the five group members. `main` is protected; changes arrive by reviewed pull request. |
+| Repository access | Public repository containing no sensitive material. Write access limited to the four group members. `main` is protected; changes arrive by reviewed pull request. |
 | Lab evidence | AWS Academy screenshots are checked for visible account identifiers or session tokens before being committed. |
 | Data integrity | Raw data is immutable. All transformations are scripted, so any output can be regenerated and verified against source. |
 

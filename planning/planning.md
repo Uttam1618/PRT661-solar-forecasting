@@ -32,16 +32,19 @@ Week 6 = 24–30 Aug, Week 9 = 14–20 Sep and Week 12 = 5–11 Oct.
 
 ## Epic schedule
 
-| Epic | Start | Due | Primary owner |
-|---|---|---|---|
-| Data Acquisition | 20 Jul | 16 Aug | Abhishek Tamang |
-| Data Storage | 3 Aug | 23 Aug | Abhishek Tamang |
-| Data Processing | 10 Aug | 30 Aug | Sarin Uprety |
-| Feature Engineering | 17 Aug | 6 Sep | Sarin Uprety |
-| Analytics and Machine Learning | 24 Aug | 20 Sep | Yogesh Basnet |
-| Visualisation | 7 Sep | 23 Sep | Yogesh Basnet |
-| Workflow Automation | 7 Sep | 23 Sep | Uttam Shrestha |
-| Governance and Monitoring | 20 Jul | 23 Sep | Uttam Shrestha |
+| Epic | Start | Due | Accountable owner | Second member |
+|---|---|---|---|---|
+| Data Acquisition | 20 Jul | 16 Aug | Abhishek Tamang | |
+| Data Storage | 3 Aug | 23 Aug | Abhishek Tamang | |
+| Data Processing | 10 Aug | 30 Aug | Sarin Uprety | |
+| Feature Engineering | 17 Aug | 6 Sep | Sarin Uprety | Uttam Shrestha |
+| Analytics and Machine Learning | 24 Aug | 20 Sep | Yogesh Basnet | Uttam Shrestha |
+| Visualisation | 7 Sep | 23 Sep | Yogesh Basnet | |
+| Workflow Automation | 7 Sep | 23 Sep | Uttam Shrestha | |
+| Governance and Monitoring | 20 Jul | 23 Sep | Uttam Shrestha | |
+
+Accountable owners are set as the Jira assignee on each of the eight epics. Second members hold
+named tasks inside an epic without taking accountability for it.
 
 These eight names are used identically in the Jira board and in the Draw.io workflow diagram
 (`../Workflow_Diagrams/02-workflow-plan.drawio`).
@@ -68,6 +71,17 @@ These eight names are used identically in the Jira board and in the Draw.io work
 | 16 | Assemble and format A1 report | Governance and Monitoring | In Progress |
 
 *Statuses verified against the Jira board on 12 August 2026.*
+
+## Carried into Sprint 2
+
+Raised by the architecture diagram review of 16 August 2026 and allocated to Sprint 2.
+
+| Key | Task | Epic | Owner | Status |
+|---|---|---|---|---|
+| SCRUM-29 | Specify `bess_available` flag and BESS null handling in the feature table | Feature Engineering | Uttam Shrestha | To Do |
+| SCRUM-30 | Add persistence baseline and prediction interval reporting to the evaluation protocol | Analytics and Machine Learning | Uttam Shrestha | To Do |
+
+The board now holds 18 tasks, every one allocated to a sprint and assigned to a named member.
 
 ## Dependencies
 
