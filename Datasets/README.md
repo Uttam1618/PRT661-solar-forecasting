@@ -8,7 +8,7 @@ version control.
 
 ```
 Datasets/
-├── raw/          Source of truth — 19 yearly extracts, 2008–2026 (~2.9 GB)
+├── raw/          Source of truth — 19 yearly extracts, 2008–2026 (~3.1 GB)
 └── reference/    Cross-check only — 96-Site_DKA-MasterMeter1.csv (390 MB)
 ```
 

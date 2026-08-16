@@ -12,7 +12,7 @@ All figures below are measured from the downloaded files, not estimated.
 
 | File group | Files | Rows | Columns | Size |
 |---|---|---|---|---|
-| Yearly extracts | `Alice_Springs_2008.csv` … `_2026.csv` (19) | ~1.9M | 197 → 210 | ~3.0 GB |
+| Yearly extracts | `Alice_Springs_2008.csv` … `_2026.csv` (19) | ~1.9M | 197 → 210 | ~3.1 GB |
 | Master meter extract | `96-Site_DKA-MasterMeter1.csv` | 1,767,903 | 17 | 390 MB |
 
 **Resolution:** 5-minute intervals throughout.
@@ -120,7 +120,7 @@ work.
 
 | V | Assessment |
 |---|---|
-| **Volume** | ~3.4 GB, 1.8M rows on the master meter, 17 years |
+| **Volume** | ~3.5 GB, 1.8M rows on the master meter, 17 years |
 | **Velocity** | 5-minute batch. The dispatch decision can wait → **batch**, not streaming |
 | **Variety** | Structured time-series CSV; single schema after reconciliation |
 | **Veracity** | Documented missingness, schema drift, sensor outages, cumulative counter |
