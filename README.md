@@ -107,7 +107,7 @@ for row counts, coverage, schema drift and measured missingness.
 
 | | Focus | Weight | Due | Status |
 |---|---|---|---|---|
-| A1 | Project Proposal and Design | 10% | 16 Aug 2026 | In progress |
+| A1 | Project Proposal and Design | 10% | 16 Aug 2026 | Submitted |
 | A2 | Progress Report and Development | 20% | Week 6 | Not started |
 | A3 | Group Technical Demonstration | 30% | Week 9 | Not started |
 | A4 | Final Professional Report | 40% | Week 12 | Not started |
