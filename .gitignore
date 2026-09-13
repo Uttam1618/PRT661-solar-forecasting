@@ -9,6 +9,12 @@ Datasets/*
 *.h5
 *.hdf5
 
+# Small analysis outputs ARE committed as assessment evidence
+!Outputs/
+!Outputs/**/*.csv
+!Outputs/**/*.md
+!Outputs/**/*.png
+
 # ---- Models and large artefacts ----
 models/
 *.pkl
