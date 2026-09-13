@@ -1,0 +1,125 @@
+<mxfile host="app.diagrams.net" modified="2026-09-13T00:00:00.000Z" agent="PRT661" version="24.0.0">
+  <diagram id="sysarch-a2" name="System architecture A2">
+    <mxGraphModel dx="1600" dy="1200" grid="0" gridSize="10" guides="1" tooltips="1"
+                  connect="1" arrows="1" fold="1" page="1" pageScale="1"
+                  pageWidth="1050" pageHeight="1150" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="&lt;b&gt;PRT661 Solar Generation Forecasting&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=21;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="1000" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" value="&lt;b&gt;System Architecture as Built at Assessment 2&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=21;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="20" y="50" width="1000" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" value="DKASC Alice Springs · Master Meter 1, 2008 to 2025 · Theme 2 Predictive Analytics and Forecasting" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontColor=#5a6570;" vertex="1" parent="1">
+          <mxGeometry x="20" y="82" width="1000" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" value="&lt;i&gt;Objective: forecast generation 1 to 24 hours ahead so that battery charge and discharge can be scheduled against expected output&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="20" y="104" width="1000" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="band7" value="&lt;b&gt;&lt;font color='#1f7a4d'&gt;7. Workflow Automation &amp;#160;(cross-cutting)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c5c42'&gt;Reproducible notebook chain 01 to 05 &amp;#160;·&amp;#160; quality gates with thresholds &amp;#160;·&amp;#160; scheduled orchestration not yet implemented&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#eef7f1;strokeColor=#1f7a4d;strokeWidth=2;verticalAlign=middle;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="30" y="138" width="965" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="src" value="&lt;b&gt;DKASC Portal&lt;/b&gt;&lt;br&gt;&lt;i&gt;&lt;font style='font-size:11px;color:#5a6570'&gt;external source&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;&lt;font color='#1f7a4d'&gt;Master Meter 1 &amp;#160;·&amp;#160; PRIMARY&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style='font-size:11px'&gt;1,767,903 rows · weather + target&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color='#b3243b'&gt;&lt;/font&gt;&lt;br&gt;&lt;font color='#b3243b' style='font-size:11px'&gt;19 yearly extracts: schema evidence only&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#7a8494;strokeWidth=2;dashed=1;dashPattern=8 5;verticalAlign=top;spacingTop=10;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="30" y="225" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="c1" value="&lt;b&gt;1. Data Acquisition&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Profile all 19 extracts first&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Select the weather-complete extract&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Reindex to a complete 5 min grid&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eaeef7;strokeColor=#3d5280;strokeWidth=2;verticalAlign=top;spacingTop=8;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="365" y="225" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="c1_s" value="&lt;b&gt;DELIVERED&lt;/b&gt;" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1f7a4d;opacity=16;strokeColor=none;fontSize=10;fontColor=#1f7a4d;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="375" y="357" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c2" value="&lt;b&gt;2. Data Storage&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Snappy Parquet, columnar&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;5 minute and hourly stores&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Queried through DuckDB&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eaeef7;strokeColor=#3d5280;strokeWidth=2;verticalAlign=top;spacingTop=8;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="700" y="225" width="295" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="c2_s" value="&lt;b&gt;DELIVERED&lt;/b&gt;" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1f7a4d;opacity=16;strokeColor=none;fontSize=10;fontColor=#1f7a4d;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="710" y="357" width="275" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c3" value="&lt;b&gt;3. Data Processing&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Sentinels · physical ranges · gaps&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Register wraps at 1,000,000: 6 fixed&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Validated 99.7% against power&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eaeef7;strokeColor=#3d5280;strokeWidth=2;verticalAlign=top;spacingTop=8;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="30" y="450" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="c3_s" value="&lt;b&gt;DELIVERED&lt;/b&gt;" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1f7a4d;opacity=16;strokeColor=none;fontSize=10;fontColor=#1f7a4d;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="582" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" value="&lt;b&gt;4. Feature Engineering&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Solar geometry · clear sky index&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Lags 1, 2, 3, 24, 168 h · rolling&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Degradation: -0.454 kW/year&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eaeef7;strokeColor=#3d5280;strokeWidth=2;verticalAlign=top;spacingTop=8;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="365" y="450" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="c4_s" value="&lt;b&gt;DELIVERED&lt;/b&gt;" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1f7a4d;opacity=16;strokeColor=none;fontSize=10;fontColor=#1f7a4d;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="375" y="582" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" value="&lt;b&gt;5. Analytics and ML&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Gradient boosting · 3 baselines&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;4 walk-forward folds, 2019-2025&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;1 h MAE 3.61 · 24 h MAE 6.96 kW&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eaeef7;strokeColor=#3d5280;strokeWidth=2;verticalAlign=top;spacingTop=8;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="700" y="450" width="295" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="c5_s" value="&lt;b&gt;DELIVERED&lt;/b&gt;" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#1f7a4d;opacity=16;strokeColor=none;fontSize=10;fontColor=#1f7a4d;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="710" y="582" width="275" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" value="&lt;b&gt;6. Visualisation&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;11 static figures delivered&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Error by hour and by month&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Forecast vs actual with intervals&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#eaeef7;strokeColor=#3d5280;strokeWidth=2;verticalAlign=top;spacingTop=8;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="30" y="675" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="c6_s" value="&lt;b&gt;PARTIAL · dashboard in A3&lt;/b&gt;" style="rounded=1;arcSize=40;whiteSpace=wrap;html=1;fillColor=#b5790c;opacity=16;strokeColor=none;fontSize=10;fontColor=#b5790c;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="807" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="out" value="&lt;b&gt;FORECAST OUTPUT&lt;/b&gt;&lt;br&gt;&lt;i&gt;&lt;font style='font-size:11px;color:#5a6570'&gt;project deliverable&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Generation 1 and 24 h ahead&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;with 80% prediction intervals&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#2c3444'&gt;Daylight coverage 0.772 / 0.706&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#b3243b'&gt;24 h interval overconfident&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#dce6f7;strokeColor=#1e2d5c;strokeWidth=3;verticalAlign=top;spacingTop=10;fontSize=13;fontColor=#1e2d5c;" vertex="1" parent="1">
+          <mxGeometry x="365" y="675" width="300" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="dec" value="&lt;b&gt;DECISION SUPPORTED&lt;/b&gt;&lt;br&gt;&lt;i&gt;&lt;font style='font-size:11px'&gt;operational use, not a deliverable&lt;/font&gt;&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;font style='font-size:11px'&gt;When should the battery charge,&lt;/font&gt;&lt;br&gt;&lt;font style='font-size:11px'&gt;and when should it discharge?&lt;/font&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fdf0f2;strokeColor=#b3243b;strokeWidth=2;dashed=1;dashPattern=8 5;verticalAlign=top;spacingTop=10;fontSize=13;fontColor=#b3243b;" vertex="1" parent="1">
+          <mxGeometry x="700" y="675" width="295" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="note" value="&lt;i&gt;The project deliverable ends at the forecast. The dispatch decision is the operational use it informs.&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=12;fontColor=#5a6570;" vertex="1" parent="1">
+          <mxGeometry x="20" y="850" width="1000" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="band8" value="&lt;b&gt;&lt;font color='#b3243b'&gt;8. Governance and Monitoring &amp;#160;(cross-cutting)&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;font style='font-size:11px;color:#7a2030'&gt;8 quality gates, 7 pass and 1 fails &amp;#160;·&amp;#160; 13 A1 risks reviewed, 5 new &amp;#160;·&amp;#160; generative AI disclosure &amp;#160;·&amp;#160; dated planning records &amp;#160;·&amp;#160; scope-change authority&lt;/font&gt;" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fdf0f2;strokeColor=#b3243b;strokeWidth=2;verticalAlign=middle;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="30" y="880" width="965" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#1f7a4d;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="src" target="c1">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#1f7a4d;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c1" target="c2">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#1f7a4d;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c2" target="c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="847" y="415" />
+              <mxPoint x="180" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#1f7a4d;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c3" target="c4">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#1f7a4d;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c4" target="c5">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#1f7a4d;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="c5" target="c6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="847" y="640" />
+              <mxPoint x="180" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#1e2d5c;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="c6" target="out">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#b3243b;dashed=1;dashPattern=6 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="out" target="dec">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;endArrow=blockThin;endFill=1;strokeWidth=2.5;strokeColor=#8a93a0;dashed=1;dashPattern=6 4;strokeWidth=1.5;exitX=0;exitY=0.9;exitDx=0;exitDy=0;entryX=1;entryY=0.9;entryDx=0;entryDy=0;" edge="1" parent="1" source="c5" target="c4">
+          <mxGeometry relative="1" as="geometry">
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="drift" value="&lt;i&gt;retrain on drift&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=10;fontColor=#8a93a0;" vertex="1" parent="1">
+          <mxGeometry x="675" y="600" width="130" height="18" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
