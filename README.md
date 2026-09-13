@@ -101,14 +101,64 @@ for row counts, coverage, schema drift and measured missingness.
 
 ## Reproducing this work
 
-*To be completed as the pipeline is built in A2.*
+Place the DKASC extracts under `Datasets/` as described in
+[`Datasets/README.md`](Datasets/README.md), then run the notebooks in order. Each stage reads only
+the store its predecessor wrote, and each emits a markdown artefact under `Outputs/` that the
+Assessment 2 report cites.
+
+| # | Notebook | Reads | Writes | Runtime |
+|---|---|---|---|---|
+| 01 | `01_data_profiling.ipynb` | 19 raw yearly CSVs | `Outputs/schema_matrix.csv` | ~3 min |
+| 01b | `01b_schema_decisions.ipynb` | schema matrix, raw CSVs | `Outputs/schema_drift_summary.md` | ~2 min |
+| 02 | `02_ingest_mastermeter1.ipynb` | `Datasets/reference/96-Site_DKA-MasterMeter1.csv` | 5 min and hourly Parquet, `Outputs/data_quality_mastermeter1.md` | ~2 min |
+| 03 | `03_clean_mastermeter1.ipynb` | 5 min Parquet | cleaned Parquet, `Outputs/cleaning_report_mastermeter1.md` | ~3 min |
+| 04 | `04_features_and_eda.ipynb` | cleaned hourly Parquet | `features_hourly.parquet`, figures 1 to 3, feature dictionary | ~1 min |
+| 04b | `04b_supporting_figures.ipynb` | cleaned hourly, features | figures 4 to 6 | ~1 min |
+| 05 | `05_modelling.ipynb` | `features_hourly.parquet` | `Outputs/model_results.md`, figures 7 to 10 | ~4 min |
+
+Requirements: Python 3.11 with pandas, numpy, matplotlib, scikit-learn, pyarrow and Pillow.
+Parquet stores and raw data are excluded from version control; small artefacts under `Outputs/`
+are committed as assessment evidence.
+
+**Note on the notebook paths.** The notebooks currently hard-code the repository location. Change
+the `REPO` variable in the first cell of each notebook to your own path.
+
+## Assessment 2 headline results
+
+Target: Master Meter 1 `Active_Power`, forecast 1 hour and 24 hours ahead. Features are taken at
+time t and the label at t+h, so no weather forecast is assumed.
+
+| Model | 1 h MAE | 1 h R2 | 24 h MAE | 24 h R2 |
+|---|---|---|---|---|
+| Gradient boosting | **3.61 kW** | **0.980** | **6.96 kW** | **0.913** |
+| Seasonal naive | 7.74 kW | 0.887 | 7.74 kW | 0.887 |
+| Persistence | 13.90 kW | 0.866 | 7.74 kW | 0.887 |
+| Climatology | 11.07 kW | 0.889 | 11.07 kW | 0.889 |
+
+Mean across four expanding-window walk forward folds, 2019 to 2025. At the 24 hour horizon
+seasonal naive is identical to persistence by construction.
+
+Measured panel degradation on the stable array, 2014 onward: **-0.454 kW per year, -0.94% of the
+mean annually**.
+
+**Known limitation.** The 80% prediction interval is overconfident at 24 hours: daylight coverage
+is 0.706 against a nominal 0.80, which fails the project's own quality gate. It is published with
+that warning rather than withdrawn. Recalibration is scheduled for Assessment 3.
+
+## What changed in Assessment 2
+
+The nineteen yearly extracts contain **no meteorological columns at all**. Master Meter 1 became
+the primary dataset because it carries irradiance, temperature, humidity, wind and rainfall at the
+same resolution and is the series the benchmark reports on. Full reasoning and a per-column
+coverage table are in [`Outputs/schema_drift_summary.md`](Outputs/schema_drift_summary.md) and
+[`Project_Planning_Records/2026-09-13-a2-sprint.md`](Project_Planning_Records/2026-09-13-a2-sprint.md).
 
 ## Assessments
 
 | | Focus | Weight | Due | Status |
 |---|---|---|---|---|
 | A1 | Project Proposal and Design | 10% | 16 Aug 2026 | Submitted |
-| A2 | Progress Report and Development | 20% | Week 6 | Not started |
+| A2 | Progress Report and Development | 20% | 13 Sep 2026 | Submitted |
 | A3 | Group Technical Demonstration | 30% | Week 9 | Not started |
 | A4 | Final Professional Report | 40% | Week 12 | Not started |
 
@@ -117,6 +167,13 @@ for row counts, coverage, schema drift and measured missingness.
 Recorded in the governance section of
 [`Task_Allocation/task-allocation.md`](Task_Allocation/task-allocation.md): decision rights,
 definition of done, branching, and data handling.
+
+## Use of generative AI
+
+Generative AI assisted with notebook code, report drafting and project administration during
+Assessment 2. Its use is disclosed in full, including four errors it introduced that the team
+found and corrected, in
+[`Supporting_Documents/ethics-privacy-security.md`](Supporting_Documents/ethics-privacy-security.md).
 
 ## Licence and attribution
 
