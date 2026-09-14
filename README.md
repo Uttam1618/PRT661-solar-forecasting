@@ -73,7 +73,7 @@ Workflow stages (these names are used identically in the Draw.io diagrams and as
 7. Workflow Automation
 8. Governance and Monitoring *(cross-cutting)*
 
-Schedule, sprints and epic dates: [`Planning/planning.md`](Planning/planning.md)
+Schedule, sprints and epic dates: [`planning/planning.md`](planning/planning.md)
 
 ## Repository structure
 
@@ -83,7 +83,7 @@ Folders map directly to the documentation artefacts required by the assessment.
 Assessment_Reports/         A1-A4 submissions as PDF
 Architecture_Diagrams/      Four architecture diagrams, sources and PNG exports
 Workflow_Diagrams/          Workflow plan, source and PNG export
-Planning/                   Milestones, sprints, epic schedule, sprint plans
+planning/                   Milestones, sprints, epic schedule, sprint plans
 Task_Allocation/            Roles, epic ownership, report sections, governance
 Project_Planning_Records/   Dated meeting and decision records
 Supporting_Documents/       Risk register, ethics and privacy, data quality
