@@ -12,7 +12,7 @@ and the updated version is included in both this repository and the relevant ass
 
 | Required artefact | File |
 |---|---|
-| High-level system architecture | `01-system-architecture` |
+| High-level system architecture | `01-system-architecture` (A1 design), `07-system-architecture-a2`, `08-system-architecture-a3` (as built) |
 | Data pipeline architecture | `05-data-pipeline-architecture` |
 | Database or data storage design | `03-data-storage-design` |
 | Component interaction | `04-component-interaction` |
@@ -63,3 +63,4 @@ Governance and Monitoring
 | 1 Aug 2026 | Initial set created for A1 — system architecture, workflow plan, storage design, component interaction | Uttam Shrestha |
 | 7 Aug 2026 | Data pipeline architecture added as a separate diagram; all five exported to PNG at 200% zoom | Uttam Shrestha |
 | 12 Aug 2026 | Diagrams reorganised into `Architecture_Diagrams/` and `Workflow_Diagrams/`; duplicated `.drawio.png` extensions corrected | Uttam Shrestha |
+| 29 Sep 2026 | `08-system-architecture-a3` added: system as built at A3, with interval calibration, site and battery model, and dispatch simulation; built and planned parts marked | |
