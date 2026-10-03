@@ -185,7 +185,7 @@ perfect demand the same solar forecast would capture 85%.
 **Planned for Assessment 4:** a better demand forecast (weekday and weekend patterns,
 temperature), an optimiser in place of the rule, and drift monitoring with scheduled retraining.
 
-**Assessment 3 demonstration video:** link to be added.
+**Assessment 3 demonstration video:** [Watch on Youtube] (https://youtu.be/xvJuezoTlnU?si=Or8yRUyxQJGdn6X4)
 
 ## What changed in Assessment 2
 
