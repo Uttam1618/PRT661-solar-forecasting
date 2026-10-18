@@ -112,6 +112,33 @@ Generative AI was used as a drafting and review tool. It was not used to fabrica
 generate results that were not produced by running the committed notebooks, or to write the
 individual reflections, which are assessed as each member's own words.
 
+## 8. Use of generative AI in Assessments 3 and 4
+
+The commitment in Section 6 applies to every assessment, so the disclosure made for Assessment 2
+is continued here on the same basis.
+
+Generative AI was used during Assessments 3 and 4 as follows.
+
+| Where used | Nature of the assistance | What the team did |
+|---|---|---|
+| Notebook code | Drafting notebooks 06 (calibration, battery model, dispatch), 07 (demand models) and 08 (monitoring, drift, retraining), and the plotting code | Specified each analysis, ran every notebook on the team's own data, checked each printed result and figure, and asked for corrections where output looked wrong |
+| Dashboard code | Drafting the Streamlit dashboard and the battery module | Ran it locally, checked it reproduces the notebook results, took the screenshots and committed it through a reviewed pull request |
+| Report drafting | Drafting and structuring Sections 2 and 3 of the A4 report and the A3 slide content from the team's committed outputs | Every number was checked against the output file it came from before inclusion |
+| Diagrams | Drafting architecture diagrams 09 and 10 | Reviewed against the committed notebooks and outputs |
+| Individual reflections | Drafting a first version of each member's reflection from that member's own Jira issues and pull requests | Each member reviewed their reflection and edited it so that it states their own work and view |
+| Project administration | Drafting Jira issue descriptions and sprint plans |  |
+
+Errors found in AI drafted work during Assessments 3 and 4 and corrected by the team include an
+unverified sign convention for the battery and grid columns (resolved by testing all four
+conventions against the energy balance) and statements in report drafts that did not match the
+outputs (for example the cause of an alert episode), which were corrected after checking the data.
+
+### Boundary the group applied
+
+The same boundary as Assessment 2: generative AI was not used to fabricate data or to report any
+result that was not produced by running the committed notebooks. All technical decisions recorded
+in this repository are ones the group can explain and defend.
+
 ---
 
 ## References

@@ -88,3 +88,39 @@ notebook or output file that substantiates them.
 | Date | Reviewed by | Changes |
 |---|---|---|
 | 13 Sep 2026 | Uttam Shrestha | Assessment 2 review. Thirteen A1 risks assessed against measured evidence: T3's stated mitigation would itself have failed and is documented; T1 and T5 were worse than assessed; T4 and T8 played out as planned; T2 closed by a design change. P1, P3 and P6 realised and remain open. Five new risks added: T9, T10, T11, G6 and G7, four of which were realised and closed during development. G6 remains open and fails a stated quality gate. |
+
+---
+
+# Assessment 4 review, 18 October 2026
+
+Reviewed against the evidence produced in Assessments 3 and 4 (notebooks 06, 07 and 08, and the
+dashboard). Outcomes cite the notebook or output that supports them.
+
+## Existing risks: status at Assessment 4
+
+| # | Risk | What happened in A3 and A4 | Status |
+|---|---|---|---|
+| G6 | Prediction intervals overconfident at 24 hours | Crossed quantiles repaired (3,929 rows) and the interval recalibrated with rolling conformal prediction. Daylight coverage is now 80.1% at 1 hour and 80.0% at 24 hours, and the quality gate passes. Evidence: notebook 06, `Outputs/dispatch_results.md`, figure 11 | **Closed** |
+| G4 | Inaccurate forecast drives a poor dispatch decision | The plan uses a cautious solar forecast (caution 0.5, chosen on 2024 and tested on 2025), the operator approves each overnight charge, and daily monitoring raises an alert when error or coverage leave fixed limits. Evidence: notebooks 06 and 08 | Mitigated |
+| G5 | Irreproducible results | All 18 figures and every reported number regenerate from notebooks 01 to 08 run in order; `run_pipeline.py` runs them and checks every expected output. The dashboard battery rule reproduces notebook 07 exactly. | Mitigated |
+| T5 | Stale data | Still open. Master Meter 1 ends 23 August 2025, so every evaluation stops there and nothing has been validated on newer seasons. | Realised, **still open** |
+| T6 | Limited battery history | Seventeen months of telemetry (April 2024 to August 2025) were enough to fit the battery (354 kWh, 115 kW, 82.8% round trip) and evaluate the plan, with 2025 held out for testing. | Mitigated |
+| G1 | Credentials committed to the repository | No credentials in the repository or dashboard. AWS lab credentials for the capstone were entered only in the lab terminal. | Mitigated |
+| P1 | Uneven contribution | Every member owns named Jira issues and pull requests in Sprints 3 and 4; contributions are listed with links on each individual page. | Mitigated |
+| P3, P6 | Late, compressed delivery | Improved in A3: Sprint 3 closed with all its issues done at submission. A4 work was again concentrated in the final week before the deadline. | Partly mitigated |
+
+## New risks identified during Assessments 3 and 4
+
+| # | Risk | Likelihood | Impact | Mitigation | Owner |
+|---|---|---|---|---|---|
+| T12 | Site configuration change breaks the link between Master Meter 1 and whole site solar | Realised | High | Detected at the end of February 2024 (site solar to Master Meter 1 ratio fell from 2.21 to 1.13). The scale factor was refitted on March 2024 only, and notebook 08 now runs a drift check (7 day median more than 20% from reference for 3 days) that flags this change automatically. | Uttam Shrestha |
+| T13 | Demand pattern changes, so the demand model degrades | Medium | Medium | Monthly refit of the demand model (planning hour MAE 24.9 kW against 41.3 kW for a model never retrained); a triggered refit when error rises 15% above baseline is kept as backup. Evidence: notebook 08 | Yogesh Basnet |
+| T14 | The real tariff differs from the illustrative one | Medium | High | Prices are parameters in the dashboard. Under a flat tariff the overnight charging rule loses money, so the tariff must be confirmed before deployment and the plan switched to solar only storage if it is flat. Evidence: Section 9 of the A4 report | Uttam Shrestha |
+| T15 | Simulated savings overstate real savings | Medium | Medium | The simulation assumes the battery follows the plan exactly and ignores wear. Results are reported with bootstrap intervals and next to perfect foresight and the recorded battery; a shadow mode trial is recommended before relying on the saving. | Uttam Shrestha |
+| G8 | An operator follows a wrong recommendation | Low | Medium | Decision support only: the dashboard is read only, shows the reasoning behind each decision and the uncertainty, and the operator keeps a manual override. | Abhisek Tamang |
+
+## Review
+
+| Date | Reviewed by | Changes |
+|---|---|---|
+| 18 Oct 2026 | Abhisek Tamang | Assessment 4 review. G6 closed by interval calibration. G4, G5, T6, G1 and P1 mitigated. T5 still open. P3 and P6 improved in A3 but A4 work was again compressed. Five new risks added: T12 (realised and handled), T13, T14, T15 and G8. |
