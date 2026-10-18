@@ -89,6 +89,7 @@ Project_Planning_Records/   Dated meeting and decision records
 Supporting_Documents/       Risk register, ethics and privacy, data quality
 Datasets/                   Local data directory, contents are NOT committed
 notebooks/                  Analysis notebooks 01 to 06, run in order
+dashboard/                  Streamlit decision support dashboard (A4)
 Outputs/                    Result tables, markdown reports and figures, committed as evidence
 ```
 
@@ -125,6 +126,30 @@ are committed as assessment evidence.
 
 **Note on the notebook paths.** The notebooks currently hard-code the repository location. Change
 the `REPO` variable in the first cell of each notebook to your own path.
+
+## Decision support dashboard
+
+An interactive Streamlit dashboard for the site operator (Assessment 4). It reads only the saved
+outputs in `Datasets/processed` and `Outputs`, so run notebooks 05 to 08 first. The nightly battery
+rule from notebook 06 is re-run live (`dashboard/battery.py`), so every setting changes the plan.
+
+```
+pip install -r dashboard/requirements.txt
+streamlit run dashboard/app.py
+```
+
+It opens at http://localhost:8501 with six pages:
+
+| Page | What it shows |
+|---|---|
+| Overview | Saving, value of the forecast and share of perfect foresight, cumulative and monthly savings by strategy |
+| Battery plan by day | Clickable calendar of daily savings, the 22:00 decision, solar forecast range against actual, battery charge |
+| Scenario lab | Tariff, period, solar caution, demand forecast and battery size compared live |
+| Forecast models | Demand model accuracy by hour, month and day type, week explorer |
+| System health | Coverage and error monitoring with alerts, drift check, retraining strategies |
+| Data and pipeline | Pipeline diagram, input file inventory, nightly run schedule |
+
+Screenshots: [`Outputs/figures/dashboard/`](Outputs/figures/dashboard/)
 
 ## Assessment 2 headline results
 
