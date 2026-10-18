@@ -94,7 +94,7 @@ repository are ones the group can explain and defend.
 Section 6 commits this group to acknowledging generative AI use in accordance with CDU policy.
 This section discharges that commitment for Assessment 2.
 
-Generative AI (Claude, Anthropic) was used substantially during Assessment 2. Its use is set out
+Generative AI was used during Assessment 2. Its use is set out
 below in full rather than summarised, so that a reader can judge exactly where the boundary
 between machine assistance and team work falls.
 
@@ -103,7 +103,7 @@ between machine assistance and team work falls.
 | Notebook code | Drafting the profiling, ingestion, cleaning, feature engineering, figure and modelling notebooks, including plotting code | Specified the requirements, executed every notebook, inspected all output, and identified and corrected errors in the generated code |
 | Error identification | Reviewing printed output and flagging inconsistencies against expectations | Ran the checks and made the corrections. Four substantive errors were found this way and each is documented in the A2 report rather than removed from the record |
 | Report drafting | Drafting and structuring the Assessment 2 technical section from the team's measured outputs | Verified every figure and number against the source artefact before inclusion |
-| Project administration | Drafting Jira issue descriptions and the commit allocation document | Reviewed and applied by the Project Lead |
+| Project administration | Drafting Jira issue descriptions and the commit allocation document |  |
 | Individual reflections | Not used, except for grammar and length corrections to text the member had already written | Each member wrote their own reflection in their own words |
 
 ### Boundary the group applied
