@@ -81,14 +81,14 @@ Folders map directly to the documentation artefacts required by the assessment.
 
 ```
 Assessment_Reports/         A1-A4 submissions as PDF
-Architecture_Diagrams/      Architecture diagrams (A1 design, A2 and A3 as built), sources and PNG exports
+Architecture_Diagrams/      Architecture diagrams (A1 design, A2, A3 and A4 as built, A4 deployment), sources and PNG exports
 Workflow_Diagrams/          Workflow plan, source and PNG export
 planning/                   Milestones, sprints, epic schedule, sprint plans
 Task_Allocation/            Roles, epic ownership, report sections, governance
 Project_Planning_Records/   Dated meeting and decision records
 Supporting_Documents/       Risk register, ethics and privacy, data quality
 Datasets/                   Local data directory, contents are NOT committed
-notebooks/                  Analysis notebooks 01 to 06, run in order
+notebooks/                  Analysis notebooks 01 to 08, run in order (run_pipeline.py runs and checks them)
 dashboard/                  Streamlit decision support dashboard (A4)
 Outputs/                    Result tables, markdown reports and figures, committed as evidence
 ```
@@ -107,7 +107,7 @@ for row counts, coverage, schema drift and measured missingness.
 Place the DKASC extracts under `Datasets/` as described in
 [`Datasets/README.md`](Datasets/README.md), then run the notebooks in order. Each stage reads only
 the store its predecessor wrote, and each emits a markdown artefact under `Outputs/` that the
-Assessment 2 report cites.
+reports cite.
 
 | # | Notebook | Reads | Writes | Runtime |
 |---|---|---|---|---|
@@ -119,13 +119,30 @@ Assessment 2 report cites.
 | 04b | `04b_supporting_figures.ipynb` | cleaned hourly, features | figures 4 to 6 | ~1 min |
 | 05 | `05_modelling.ipynb` | `features_hourly.parquet` | `Outputs/model_results.md`, figures 7 to 10, `forecasts_hourly.parquet` (all out of sample forecasts, added in A3) | ~6 min |
 | 06 | `06_bess_dispatch.ipynb` | `forecasts_hourly.parquet`, `features_hourly.parquet`, `Datasets/raw/Alice_Springs_2024.csv` and `Alice_Springs_2025.csv` | `forecasts_calibrated.parquet`, `dispatch_hourly.parquet`, `Outputs/dispatch_results.md`, `Outputs/dispatch_strategies.csv`, figures 11 to 14 | a few min |
+| 07 | `07_demand_forecast.ipynb` | `dispatch_hourly.parquet`, `mastermeter1_hourly_clean.parquet` (temperature) | `demand_forecasts.parquet`, `Outputs/demand_model_results.md`, `Outputs/demand_model_comparison.csv`, figures 15 and 16 | a few min |
+| 08 | `08_monitoring_retraining.ipynb` | `forecasts_calibrated.parquet`, `demand_forecasts.parquet`, `Datasets/raw/Alice_Springs_2024.csv` and `Alice_Springs_2025.csv` | `monitoring_daily.parquet`, `Outputs/monitoring_results.md`, `Outputs/monitoring_alerts.csv`, figures 17 and 18 | a few min |
 
-Requirements: Python 3.11 with pandas, numpy, matplotlib, scikit-learn, pyarrow and Pillow.
+Requirements: Python 3.11 with pandas, numpy, matplotlib, scikit-learn, pyarrow and Pillow, plus
+jupyter to run the chain from the command line. The dashboard adds streamlit and plotly
+(`dashboard/requirements.txt`).
 Parquet stores and raw data are excluded from version control; small artefacts under `Outputs/`
 are committed as assessment evidence.
 
 **Note on the notebook paths.** The notebooks currently hard-code the repository location. Change
 the `REPO` variable in the first cell of each notebook to your own path.
+
+### One command reproducibility check
+
+`run_pipeline.py` runs the notebooks in order and checks that every expected output (stores,
+result tables and all 18 figures) exists and, after a run, was rewritten by that run.
+
+```
+python run_pipeline.py --check     # check outputs only, runs nothing
+python run_pipeline.py             # run notebooks 01 to 08, then check
+python run_pipeline.py --from 06   # rerun 06, 07 and 08, then check
+```
+
+It ends with `REPRODUCIBILITY CHECK PASSED` or lists each missing or stale output.
 
 ## Decision support dashboard
 
@@ -212,6 +229,34 @@ temperature), an optimiser in place of the rule, and drift monitoring with sched
 
 **Assessment 3 demonstration video:** [Watch on Youtube](https://youtu.be/xvJuezoTlnU?si=Or8yRUyxQJGdn6X4)
 
+## Assessment 4 headline results
+
+Assessment 4 strengthened the decision, kept it healthy and put it in front of the operator.
+Tables are in [`Outputs/demand_model_results.md`](Outputs/demand_model_results.md) and
+[`Outputs/monitoring_results.md`](Outputs/monitoring_results.md); the as built and deployment
+architecture are
+[`Architecture_Diagrams/09-system-architecture-a4.png`](Architecture_Diagrams/09-system-architecture-a4.png)
+and [`Architecture_Diagrams/10-deployment-architecture.png`](Architecture_Diagrams/10-deployment-architecture.png).
+
+**1. Demand forecasting (notebook 07).** Five approaches were compared with monthly walk forward
+refits, July 2024 to August 2025. Gradient boosting cut the planning hour error from 54.5 kW (the A3
+seven day mean) to **24.9 kW**, mainly because it knows the weekday.
+
+| Battery plan with demand from | Saving against no battery | Value of the forecast | Share of perfect foresight |
+|---|---|---|---|
+| A3: 7 day same hour mean | 20.8% | $2,209 | 39% |
+| **Gradient boosting (A4)** | **22.4%** | **$3,943** | **70%** |
+| Perfect demand (ceiling) | 22.9% | $4,566 | 80% |
+
+**2. Monitoring, drift and retraining (notebook 08).** Daily checks of the 24 hour forecast error
+and interval coverage against limits fixed on 2019 to 2020 raised 28 alert episodes over 2019 to
+2025. A drift check on the site solar to Master Meter 1 ratio flags the February 2024 site change
+automatically. Refitting the demand model monthly gives 24.9 kW against 41.3 kW for a model never
+retrained, so monthly refits are the operating choice.
+
+**3. Decision support dashboard.** Six pages, with the nightly battery rule rerun live for any
+demand forecast, solar caution, battery size or tariff (see the dashboard section above).
+
 ## What changed in Assessment 2
 
 The nineteen yearly extracts contain **no meteorological columns at all**. Master Meter 1 became
@@ -226,8 +271,8 @@ coverage table are in [`Outputs/schema_drift_summary.md`](Outputs/schema_drift_s
 |---|---|---|---|---|
 | A1 | Project Proposal and Design | 10% | 16 Aug 2026 | Submitted |
 | A2 | Progress Report and Development | 20% | 13 Sep 2026 | Submitted |
-| A3 | Group Technical Demonstration | 30% | 4 Oct 2026 | In progress |
-| A4 | Final Professional Report | 40% | Week 12 | Not started |
+| A3 | Group Technical Demonstration | 30% | 4 Oct 2026 | Submitted |
+| A4 | Final Professional Report | 40% | 19 Oct 2026 | Submitted |
 
 ## Contribution expectations
 
@@ -238,8 +283,8 @@ definition of done, branching, and data handling.
 ## Use of generative AI
 
 Generative AI assisted with notebook code, report drafting and project administration during
-Assessment 2. Its use is disclosed in full, including four errors it introduced that the team
-found and corrected, in
+Assessments 2, 3 and 4, and with the dashboard code in Assessment 4. Its use is disclosed in
+full, including errors it introduced that the team found and corrected, in
 [`Supporting_Documents/ethics-privacy-security.md`](Supporting_Documents/ethics-privacy-security.md).
 
 ## Licence and attribution
