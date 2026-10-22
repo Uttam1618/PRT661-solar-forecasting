@@ -43,7 +43,7 @@ and one other member familiar with it. Epic ownership is mirrored on the Jira bo
 eight epics carries its accountable owner as the Jira assignee.
 
 These eight names are used identically in the Jira board and in
-[`../Workflow_Diagrams/02-workflow-plan.drawio`](../Workflow_Diagrams/02-workflow-plan.drawio).
+[`../../Workflow_Diagrams/02-workflow-plan.drawio`](../../Workflow_Diagrams/02-workflow-plan.drawio).
 
 ## A1 report sections by owner
 

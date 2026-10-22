@@ -56,7 +56,7 @@ recorded in [`Supporting_Documents/ethics-privacy-security.md`](Supporting_Docum
 | Modelling and Visualisation Lead | Yogesh Basnet | [@viperx-ux](https://github.com/viperx-ux) |
 
 Full allocation, epic ownership and report sections:
-[`Task_Allocation/task-allocation.md`](Task_Allocation/task-allocation.md)
+[`Planning/Task_Allocation/task-allocation.md`](Planning/Task_Allocation/task-allocation.md)
 
 ## Project management
 
@@ -84,9 +84,9 @@ Assessment_Reports/         A1 to A4 submissions as PDF
 Presentation/               A3 demonstration slides and individual summaries
 Architecture_Diagrams/      Architecture diagrams 01 to 10: drawio/ (editable sources), png/ (exports)
 Workflow_Diagrams/          Workflow plan and progress diagrams, draw.io sources and PNG exports
-Planning/                   Milestones, sprints and epic schedule
-Task_Allocation/            Roles, epic ownership, report sections, governance
-Project_Planning_Records/   Dated meeting, sprint and decision records
+Planning/                   Milestones, sprints and epic schedule (planning.md)
+  Project_Planning_Records/   dated meeting, sprint and decision records
+  Task_Allocation/            roles, epic ownership, report sections, governance
 Supporting_Documents/       Risk register, ethics and privacy, data quality, feature dictionary
 Datasets/                   Local data directory, contents are NOT committed
 notebooks/                  Analysis notebooks 01 to 08, run in order
@@ -180,7 +180,7 @@ The nineteen yearly extracts contain **no meteorological columns at all**. Maste
 the primary dataset because it carries irradiance, temperature, humidity, wind and rainfall at the
 same resolution and is the series the benchmark reports on. Full reasoning and a per-column
 coverage table are in [`Outputs/Results/schema_drift_summary.md`](Outputs/Results/schema_drift_summary.md) and
-[`Project_Planning_Records/2026-09-13-a2-sprint.md`](Project_Planning_Records/2026-09-13-a2-sprint.md).
+[`Planning/Project_Planning_Records/2026-09-13-a2-sprint.md`](Planning/Project_Planning_Records/2026-09-13-a2-sprint.md).
 
 ## Assessment 2 headline results
 
@@ -283,7 +283,7 @@ demand forecast, solar caution, battery size or tariff (see the dashboard sectio
 ## Contribution expectations
 
 Recorded in the governance section of
-[`Task_Allocation/task-allocation.md`](Task_Allocation/task-allocation.md): decision rights,
+[`Planning/Task_Allocation/task-allocation.md`](Planning/Task_Allocation/task-allocation.md): decision rights,
 definition of done, branching, and data handling.
 
 ## Use of generative AI
