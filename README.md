@@ -73,24 +73,30 @@ Workflow stages (these names are used identically in the Draw.io diagrams and as
 7. Workflow Automation
 8. Governance and Monitoring *(cross-cutting)*
 
-Schedule, sprints and epic dates: [`planning/planning.md`](planning/planning.md)
+Schedule, sprints and epic dates: [`Planning/planning.md`](Planning/planning.md)
 
 ## Repository structure
 
 Folders map directly to the documentation artefacts required by the assessment.
 
 ```
-Assessment_Reports/         A1-A4 submissions as PDF
-Architecture_Diagrams/      Architecture diagrams (A1 design, A2, A3 and A4 as built, A4 deployment), sources and PNG exports
-Workflow_Diagrams/          Workflow plan, source and PNG export
-planning/                   Milestones, sprints, epic schedule, sprint plans
+Assessment_Reports/         A1 to A4 submissions as PDF
+Presentation/               A3 demonstration slides and individual summaries
+Architecture_Diagrams/      Architecture diagrams 01 to 10: drawio/ (editable sources), png/ (exports)
+Workflow_Diagrams/          Workflow plan and progress diagrams, draw.io sources and PNG exports
+Planning/                   Milestones, sprints and epic schedule
 Task_Allocation/            Roles, epic ownership, report sections, governance
-Project_Planning_Records/   Dated meeting and decision records
-Supporting_Documents/       Risk register, ethics and privacy, data quality
+Project_Planning_Records/   Dated meeting, sprint and decision records
+Supporting_Documents/       Risk register, ethics and privacy, data quality, feature dictionary
 Datasets/                   Local data directory, contents are NOT committed
-notebooks/                  Analysis notebooks 01 to 08, run in order (run_pipeline.py runs and checks them)
+notebooks/                  Analysis notebooks 01 to 08, run in order
 dashboard/                  Streamlit decision support dashboard (A4)
-Outputs/                    Result tables, markdown reports and figures, committed as evidence
+Outputs/                    Evidence written by the notebooks, committed:
+  Results/                    result tables (.csv) and markdown reports (.md)
+  Notebook_Figures/           figures 1 to 18
+  Dashboard_Figures/          dashboard screenshots
+run_pipeline.py             Runs the notebooks in order and checks every expected output
+.streamlit/                 Dashboard theme
 ```
 
 ## Data
@@ -111,16 +117,16 @@ reports cite.
 
 | # | Notebook | Reads | Writes | Runtime |
 |---|---|---|---|---|
-| 01 | `01_data_profiling.ipynb` | 19 raw yearly CSVs | `Outputs/schema_matrix.csv` | ~3 min |
-| 01b | `01b_schema_decisions.ipynb` | schema matrix, raw CSVs | `Outputs/schema_drift_summary.md` | ~2 min |
-| 02 | `02_ingest_mastermeter1.ipynb` | `Datasets/reference/96-Site_DKA-MasterMeter1.csv` | 5 min and hourly Parquet, `Outputs/data_quality_mastermeter1.md` | ~2 min |
-| 03 | `03_clean_mastermeter1.ipynb` | 5 min Parquet | cleaned Parquet, `Outputs/cleaning_report_mastermeter1.md` | ~3 min |
+| 01 | `01_data_profiling.ipynb` | 19 raw yearly CSVs | `Outputs/Results/schema_matrix.csv` | ~3 min |
+| 01b | `01b_schema_decisions.ipynb` | schema matrix, raw CSVs | `Outputs/Results/schema_drift_summary.md` | ~2 min |
+| 02 | `02_ingest_mastermeter1.ipynb` | `Datasets/reference/96-Site_DKA-MasterMeter1.csv` | 5 min and hourly Parquet, `Outputs/Results/data_quality_mastermeter1.md` | ~2 min |
+| 03 | `03_clean_mastermeter1.ipynb` | 5 min Parquet | cleaned Parquet, `Outputs/Results/cleaning_report_mastermeter1.md` | ~3 min |
 | 04 | `04_features_and_eda.ipynb` | cleaned hourly Parquet | `features_hourly.parquet`, figures 1 to 3, feature dictionary | ~1 min |
 | 04b | `04b_supporting_figures.ipynb` | cleaned hourly, features | figures 4 to 6 | ~1 min |
-| 05 | `05_modelling.ipynb` | `features_hourly.parquet` | `Outputs/model_results.md`, figures 7 to 10, `forecasts_hourly.parquet` (all out of sample forecasts, added in A3) | ~6 min |
-| 06 | `06_bess_dispatch.ipynb` | `forecasts_hourly.parquet`, `features_hourly.parquet`, `Datasets/raw/Alice_Springs_2024.csv` and `Alice_Springs_2025.csv` | `forecasts_calibrated.parquet`, `dispatch_hourly.parquet`, `Outputs/dispatch_results.md`, `Outputs/dispatch_strategies.csv`, figures 11 to 14 | a few min |
-| 07 | `07_demand_forecast.ipynb` | `dispatch_hourly.parquet`, `mastermeter1_hourly_clean.parquet` (temperature) | `demand_forecasts.parquet`, `Outputs/demand_model_results.md`, `Outputs/demand_model_comparison.csv`, figures 15 and 16 | a few min |
-| 08 | `08_monitoring_retraining.ipynb` | `forecasts_calibrated.parquet`, `demand_forecasts.parquet`, `Datasets/raw/Alice_Springs_2024.csv` and `Alice_Springs_2025.csv` | `monitoring_daily.parquet`, `Outputs/monitoring_results.md`, `Outputs/monitoring_alerts.csv`, figures 17 and 18 | a few min |
+| 05 | `05_modelling.ipynb` | `features_hourly.parquet` | `Outputs/Results/model_results.md`, figures 7 to 10, `forecasts_hourly.parquet` (all out of sample forecasts, added in A3) | ~6 min |
+| 06 | `06_bess_dispatch.ipynb` | `forecasts_hourly.parquet`, `features_hourly.parquet`, `Datasets/raw/Alice_Springs_2024.csv` and `Alice_Springs_2025.csv` | `forecasts_calibrated.parquet`, `dispatch_hourly.parquet`, `Outputs/Results/dispatch_results.md`, `Outputs/Results/dispatch_strategies.csv`, figures 11 to 14 | a few min |
+| 07 | `07_demand_forecast.ipynb` | `dispatch_hourly.parquet`, `mastermeter1_hourly_clean.parquet` (temperature) | `demand_forecasts.parquet`, `Outputs/Results/demand_model_results.md`, `Outputs/Results/demand_model_comparison.csv`, figures 15 and 16 | a few min |
+| 08 | `08_monitoring_retraining.ipynb` | `forecasts_calibrated.parquet`, `demand_forecasts.parquet`, `Datasets/raw/Alice_Springs_2024.csv` and `Alice_Springs_2025.csv` | `monitoring_daily.parquet`, `Outputs/Results/monitoring_results.md`, `Outputs/Results/monitoring_alerts.csv`, figures 17 and 18 | a few min |
 
 Requirements: Python 3.11 with pandas, numpy, matplotlib, scikit-learn, pyarrow and Pillow, plus
 jupyter to run the chain from the command line. The dashboard adds streamlit and plotly
@@ -166,7 +172,15 @@ It opens at http://localhost:8501 with six pages:
 | System health | Coverage and error monitoring with alerts, drift check, retraining strategies |
 | Data and pipeline | Pipeline diagram, input file inventory, nightly run schedule |
 
-Screenshots: [`Outputs/figures/dashboard/`](Outputs/figures/dashboard/)
+Screenshots: [`Outputs/Dashboard_Figures/`](Outputs/Dashboard_Figures/)
+
+## What changed in Assessment 2
+
+The nineteen yearly extracts contain **no meteorological columns at all**. Master Meter 1 became
+the primary dataset because it carries irradiance, temperature, humidity, wind and rainfall at the
+same resolution and is the series the benchmark reports on. Full reasoning and a per-column
+coverage table are in [`Outputs/Results/schema_drift_summary.md`](Outputs/Results/schema_drift_summary.md) and
+[`Project_Planning_Records/2026-09-13-a2-sprint.md`](Project_Planning_Records/2026-09-13-a2-sprint.md).
 
 ## Assessment 2 headline results
 
@@ -194,8 +208,8 @@ This was done in Assessment 3; see the results below.
 ## Assessment 3 headline results
 
 Notebook 06 turns the forecast into a battery decision and measures what it is worth. Full tables
-are in [`Outputs/dispatch_results.md`](Outputs/dispatch_results.md); the as built architecture is
-[`Architecture_Diagrams/08-system-architecture-a3.png`](Architecture_Diagrams/08-system-architecture-a3.png).
+are in [`Outputs/Results/dispatch_results.md`](Outputs/Results/dispatch_results.md); the as built architecture is
+[`Architecture_Diagrams/png/08-system-architecture-a3.png`](Architecture_Diagrams/png/08-system-architecture-a3.png).
 
 **1. Calibrated uncertainty.** Crossed quantiles were repaired and the 80% interval was
 recalibrated with rolling conformal prediction (30 day window, using only data available at the
@@ -232,11 +246,11 @@ temperature), an optimiser in place of the rule, and drift monitoring with sched
 ## Assessment 4 headline results
 
 Assessment 4 strengthened the decision, kept it healthy and put it in front of the operator.
-Tables are in [`Outputs/demand_model_results.md`](Outputs/demand_model_results.md) and
-[`Outputs/monitoring_results.md`](Outputs/monitoring_results.md); the as built and deployment
+Tables are in [`Outputs/Results/demand_model_results.md`](Outputs/Results/demand_model_results.md) and
+[`Outputs/Results/monitoring_results.md`](Outputs/Results/monitoring_results.md); the as built and deployment
 architecture are
-[`Architecture_Diagrams/09-system-architecture-a4.png`](Architecture_Diagrams/09-system-architecture-a4.png)
-and [`Architecture_Diagrams/10-deployment-architecture.png`](Architecture_Diagrams/10-deployment-architecture.png).
+[`Architecture_Diagrams/png/09-system-architecture-a4.png`](Architecture_Diagrams/png/09-system-architecture-a4.png)
+and [`Architecture_Diagrams/png/10-deployment-architecture.png`](Architecture_Diagrams/png/10-deployment-architecture.png).
 
 **1. Demand forecasting (notebook 07).** Five approaches were compared with monthly walk forward
 refits, July 2024 to August 2025. Gradient boosting cut the planning hour error from 54.5 kW (the A3
@@ -257,14 +271,6 @@ retrained, so monthly refits are the operating choice.
 **3. Decision support dashboard.** Six pages, with the nightly battery rule rerun live for any
 demand forecast, solar caution, battery size or tariff (see the dashboard section above).
 
-## What changed in Assessment 2
-
-The nineteen yearly extracts contain **no meteorological columns at all**. Master Meter 1 became
-the primary dataset because it carries irradiance, temperature, humidity, wind and rainfall at the
-same resolution and is the series the benchmark reports on. Full reasoning and a per-column
-coverage table are in [`Outputs/schema_drift_summary.md`](Outputs/schema_drift_summary.md) and
-[`Project_Planning_Records/2026-09-13-a2-sprint.md`](Project_Planning_Records/2026-09-13-a2-sprint.md).
-
 ## Assessments
 
 | | Focus | Weight | Due | Status |
@@ -272,7 +278,7 @@ coverage table are in [`Outputs/schema_drift_summary.md`](Outputs/schema_drift_s
 | A1 | Project Proposal and Design | 10% | 16 Aug 2026 | Submitted |
 | A2 | Progress Report and Development | 20% | 13 Sep 2026 | Submitted |
 | A3 | Group Technical Demonstration | 30% | 4 Oct 2026 | Submitted |
-| A4 | Final Professional Report | 40% | 19 Oct 2026 | Submitted |
+| A4 | Final Professional Report | 40% | 21 Oct 2026 (extended from 19 Oct) | Submitted |
 
 ## Contribution expectations
 

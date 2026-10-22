@@ -1,6 +1,6 @@
 # Architecture and Design Diagrams
 
-Every diagram is maintained as an editable `.drawio` source and an exported `.png`.
+Every diagram is maintained as an editable `.drawio` source in [`drawio/`](drawio/) and an exported `.png` in [`png/`](png/).
 Sources are edited at [app.diagrams.net](https://app.diagrams.net).
 
 Diagrams are updated as the project evolves. Each change is recorded in the revision history below
@@ -67,3 +67,4 @@ Governance and Monitoring
 | 12 Aug 2026 | Diagrams reorganised into `Architecture_Diagrams/` and `Workflow_Diagrams/`; duplicated `.drawio.png` extensions corrected | Uttam Shrestha |
 | 29 Sep 2026 | `08-system-architecture-a3` added: system as built at A3, with interval calibration, site and battery model, and dispatch simulation; built and planned parts marked | Abhisek Tamang |
 | 18 Oct 2026 | `09-system-architecture-a4` added: system as built at A4 with demand forecasting, monitoring and retraining, and the decision support dashboard. `10-deployment-architecture` added: nightly batch schedule, data zones and operator approval. Both kept as editable `.drawio` sources with PNG exports at 200% zoom | Abhisek Tamang |
+| 22 Oct 2026 | Sources moved into `drawio/` and PNG exports into `png/` | Uttam Shrestha |
