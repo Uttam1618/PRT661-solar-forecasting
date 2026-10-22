@@ -35,7 +35,7 @@ before every assessment submission.
 
 | # | Risk | Likelihood | Impact | Mitigation | Owner |
 |---|---|---|---|---|---|
-| G1 | Credentials committed to a public repository | Low | High | `.gitignore` excludes `.env`, keys and credential files; the governance section of [`../Task_Allocation/task-allocation.md`](../Task_Allocation/task-allocation.md) forbids pasting AWS credentials into reports, repositories or AI tools; any exposed credential is rotated immediately | All members |
+| G1 | Credentials committed to a public repository | Low | High | `.gitignore` excludes `.env`, keys and credential files; the governance section of [`../Task_Allocation/task-allocation.md`](../Planning/Task_Allocation/task-allocation.md) forbids pasting AWS credentials into reports, repositories or AI tools; any exposed credential is rotated immediately | All members |
 | G2 | Data licensing or attribution breach | Low | Medium | DKASC attribution recorded in the README and in `Datasets/README.md`; raw data excluded from version control | Uttam Shrestha |
 | G3 | Course materials redistributed publicly | Low | Medium | CDU lecture slides excluded via `.gitignore` and stored outside the repository | Uttam Shrestha |
 | G4 | Model risk — an inaccurate forecast drives a poor dispatch decision | Medium | Medium | Forecast intervals reported alongside point estimates; known weak periods (dawn, dusk, peak irradiance) documented as limitations rather than hidden | Yogesh Basnet |
