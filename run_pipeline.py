@@ -20,31 +20,31 @@ import time
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent
-PROC, OUT, FIG = "Datasets/processed/", "Outputs/", "Outputs/figures/"
+PROC, OUT, FIG = "Datasets/processed/", "Outputs/", "Outputs/Notebook_Figures/"
 
 # notebook, expected outputs (relative to the repository root)
 STAGES = [
-    ("01_data_profiling", [OUT + "schema_matrix.csv"]),
-    ("01b_schema_decisions", [OUT + "schema_drift_summary.md"]),
+    ("01_data_profiling", [OUT + "Results/schema_matrix.csv"]),
+    ("01b_schema_decisions", [OUT + "Results/schema_drift_summary.md"]),
     ("02_ingest_mastermeter1", [PROC + "mastermeter1_5min.parquet", PROC + "mastermeter1_hourly.parquet",
-                                OUT + "data_quality_mastermeter1.md"]),
+                                OUT + "Results/data_quality_mastermeter1.md"]),
     ("03_clean_mastermeter1", [PROC + "mastermeter1_5min_clean.parquet", PROC + "mastermeter1_hourly_clean.parquet",
-                               OUT + "cleaning_report_mastermeter1.md"]),
+                               OUT + "Results/cleaning_report_mastermeter1.md"]),
     ("04_features_and_eda", [PROC + "features_hourly.parquet", FIG + "fig1_generation_history.png",
                              FIG + "fig2_diurnal_and_ramps.png", FIG + "fig3_correlations.png"]),
     ("04b_supporting_figures", [FIG + "fig4_data_availability.png", FIG + "fig5_autocorrelation.png",
                                 FIG + "fig6_irradiance_power.png"]),
-    ("05_modelling", [PROC + "forecasts_hourly.parquet", OUT + "model_results.md", FIG + "fig7_pred_vs_actual.png",
+    ("05_modelling", [PROC + "forecasts_hourly.parquet", OUT + "Results/model_results.md", FIG + "fig7_pred_vs_actual.png",
                       FIG + "fig8_forecast_week.png", FIG + "fig9_importance.png", FIG + "fig10_error_profile.png"]),
     ("06_bess_dispatch", [PROC + "forecasts_calibrated.parquet", PROC + "dispatch_hourly.parquet",
-                          OUT + "dispatch_results.md", OUT + "dispatch_strategies.csv",
+                          OUT + "Results/dispatch_results.md", OUT + "Results/dispatch_strategies.csv",
                           FIG + "fig11_interval_calibration.png", FIG + "fig12_site_average_day.png",
                           FIG + "fig13_dispatch_sensitivity.png", FIG + "fig14_example_week.png"]),
-    ("07_demand_forecast", [PROC + "demand_forecasts.parquet", OUT + "demand_model_results.md",
-                            OUT + "demand_model_comparison.csv", FIG + "fig15_demand_models.png",
+    ("07_demand_forecast", [PROC + "demand_forecasts.parquet", OUT + "Results/demand_model_results.md",
+                            OUT + "Results/demand_model_comparison.csv", FIG + "fig15_demand_models.png",
                             FIG + "fig16_demand_dispatch.png"]),
-    ("08_monitoring_retraining", [PROC + "monitoring_daily.parquet", OUT + "monitoring_results.md",
-                                  OUT + "monitoring_alerts.csv", FIG + "fig17_monitoring.png",
+    ("08_monitoring_retraining", [PROC + "monitoring_daily.parquet", OUT + "Results/monitoring_results.md",
+                                  OUT + "Results/monitoring_alerts.csv", FIG + "fig17_monitoring.png",
                                   FIG + "fig18_drift_retraining.png"]),
 ]
 

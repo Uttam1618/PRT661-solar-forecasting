@@ -95,11 +95,11 @@ def load():
     d = {"sim": sim,
          "dem": opt(PROC / "demand_forecasts.parquet", pd.read_parquet),
          "mon": opt(PROC / "monitoring_daily.parquet", pd.read_parquet),
-         "strat": opt(OUT / "dispatch_strategies.csv", lambda p: pd.read_csv(p, index_col=0)),
-         "models": opt(OUT / "demand_model_comparison.csv", lambda p: pd.read_csv(p, header=[0, 1], index_col=0)),
-         "alerts": opt(OUT / "monitoring_alerts.csv", pd.read_csv),
-         "retrain": read_md_table(OUT / "monitoring_results.md", "## 3."),
-         "mon_md": opt(OUT / "monitoring_results.md", lambda p: p.read_text())}
+         "strat": opt(OUT / "Results/dispatch_strategies.csv", lambda p: pd.read_csv(p, index_col=0)),
+         "models": opt(OUT / "Results/demand_model_comparison.csv", lambda p: pd.read_csv(p, header=[0, 1], index_col=0)),
+         "alerts": opt(OUT / "Results/monitoring_alerts.csv", pd.read_csv),
+         "retrain": read_md_table(OUT / "Results/monitoring_results.md", "## 3."),
+         "mon_md": opt(OUT / "Results/monitoring_results.md", lambda p: p.read_text())}
     return d
 
 
@@ -720,7 +720,7 @@ def page_health():
                 "start": st.column_config.TextColumn("start", width="small"),
                 "end": st.column_config.TextColumn("end", width="small"),
                 "days": st.column_config.ProgressColumn("days", format="%d", min_value=0, max_value=int(a.days.max() or 1))})
-    img = OUT / "figures" / "fig18_drift_retraining.png"
+    img = OUT / "Notebook_Figures" / "fig18_drift_retraining.png"
     if img.exists():
         with st.expander("Figure 18: drift check and retraining strategies"):
             st.image(str(img))
@@ -731,11 +731,11 @@ FILES = [("Datasets/processed/dispatch_hourly.parquet", "06", "Hourly solar, dem
          ("Datasets/processed/forecasts_calibrated.parquet", "06", "Solar forecasts with calibrated 80% range"),
          ("Datasets/processed/demand_forecasts.parquet", "07", "Out of sample demand forecasts, five models"),
          ("Datasets/processed/monitoring_daily.parquet", "08", "Daily forecast error and coverage with alerts"),
-         ("Outputs/dispatch_strategies.csv", "06", "A3 strategy comparison"),
-         ("Outputs/demand_model_comparison.csv", "07", "Demand model accuracy"),
-         ("Outputs/demand_model_results.md", "07", "Demand model and battery plan summary"),
-         ("Outputs/monitoring_results.md", "08", "Monitoring, drift and retraining summary"),
-         ("Outputs/monitoring_alerts.csv", "08", "Alert episodes")]
+         ("Outputs/Results/dispatch_strategies.csv", "06", "A3 strategy comparison"),
+         ("Outputs/Results/demand_model_comparison.csv", "07", "Demand model accuracy"),
+         ("Outputs/Results/demand_model_results.md", "07", "Demand model and battery plan summary"),
+         ("Outputs/Results/monitoring_results.md", "08", "Monitoring, drift and retraining summary"),
+         ("Outputs/Results/monitoring_alerts.csv", "08", "Alert episodes")]
 
 
 @st.cache_data

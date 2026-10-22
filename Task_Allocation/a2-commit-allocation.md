@@ -11,8 +11,8 @@ attribute cleanly and no contribution has to be argued for in prose.
 
 | Files | Committed by | Commit |
 |---|---|---|
-| `.gitignore`, `notebooks/01_data_profiling.ipynb`, `Outputs/schema_matrix.csv` | Uttam Shrestha | SCRUM-12 |
-| `notebooks/01b_schema_decisions.ipynb`, `Outputs/schema_drift_summary.md` | Uttam Shrestha | SCRUM-13 |
+| `.gitignore`, `notebooks/01_data_profiling.ipynb`, `Outputs/Results/schema_matrix.csv` | Uttam Shrestha | SCRUM-12 |
+| `notebooks/01b_schema_decisions.ipynb`, `Outputs/Results/schema_drift_summary.md` | Uttam Shrestha | SCRUM-13 |
 
 ## Remaining allocation
 
@@ -21,7 +21,7 @@ attribute cleanly and no contribution has to be argued for in prose.
 | Files to commit | Jira |
 |---|---|
 | `notebooks/02_ingest_mastermeter1.ipynb` (executed, outputs saved) | SCRUM-6 |
-| `Outputs/data_quality_mastermeter1.md` | SCRUM-6 |
+| `Outputs/Results/data_quality_mastermeter1.md` | SCRUM-6 |
 | Re-download note: confirm current extract date, update `Datasets/README.md` | SCRUM-14 |
 
 Branch: `feat/storage-ingest-mastermeter1`
@@ -32,7 +32,7 @@ Target: 3 commits minimum.
 | Files to commit | Jira |
 |---|---|
 | `notebooks/03_clean_mastermeter1.ipynb` (executed) | SCRUM-7 |
-| `Outputs/cleaning_report_mastermeter1.md` | SCRUM-7 |
+| `Outputs/Results/cleaning_report_mastermeter1.md` | SCRUM-7 |
 | Year-boundary duplicate finding: each yearly file overruns one day into the next, so naive concatenation duplicates ~288 rows per boundary across 18 boundaries. Avoided by using the single Master Meter 1 extract. Record the finding and the design change. | SCRUM-16 |
 | `notebooks/04_features_and_eda.ipynb` (executed) | SCRUM-8 |
 | `Supporting_Documents/feature-dictionary.md` | SCRUM-8 |
@@ -46,10 +46,10 @@ Target: 4 commits minimum.
 | Files to commit | Jira |
 |---|---|
 | `notebooks/04b_supporting_figures.ipynb` (executed) | SCRUM-10 |
-| `Outputs/figures/fig1` to `fig6` | SCRUM-10 |
+| `Outputs/Notebook_Figures/fig1` to `fig6` | SCRUM-10 |
 | `notebooks/05_modelling.ipynb` (executed) | SCRUM-9 |
-| `Outputs/model_results.md` | SCRUM-9 |
-| `Outputs/figures/fig7` to `fig10` | SCRUM-9 |
+| `Outputs/Results/model_results.md` | SCRUM-9 |
+| `Outputs/Notebook_Figures/fig7` to `fig10` | SCRUM-9 |
 | Walk-forward protocol: 4 expanding folds, 2019 to 2025, no shuffling | SCRUM-20 |
 | Benchmark recorded as performance target: Thuseethan et al. R2 0.8015, MSE 96.13 | SCRUM-21 |
 | Persistence, seasonal naive and climatology baselines plus 80% quantile intervals | SCRUM-30 |
